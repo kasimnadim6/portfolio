@@ -1,0 +1,126 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 10rem;
+  gap: 2rem;
+  .profile {
+    flex: 1;
+    &__pic {
+      max-width: 40rem;
+      height: 50rem;
+      background: url(../../public/profile.jpeg) center center;
+      background-size: cover;
+      flex: 1;
+      transition: all 0.3s;
+      margin-bottom: 1rem;
+      position: relative;
+      .name,
+      .experience {
+        position: absolute;
+        background: linear-gradient(
+          to top left,
+          var(--primary-color),
+          var(--tertiary-color)
+        );
+        font-size: 2rem;
+        letter-spacing: 1px;
+        font-family: inherit;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #f2f2f2;
+        width: 50%;
+        text-align: end;
+        span {
+          padding: 1.2rem;
+          box-decoration-break: clone;
+        }
+      }
+      .name {
+        right: 0;
+      }
+      .experience {
+        bottom: 0;
+        &-year {
+          font-size: 6rem;
+          display: block;
+          padding: 0.8rem !important;
+          text-align: start;
+          position: absolute;
+          //   color: var(--primary-color);
+          top: -8.7rem;
+          background: linear-gradient(
+            to top left,
+            var(--primary-color),
+            var(--tertiary-color)
+          );
+        }
+      }
+      &:hover {
+        .name,
+        .experience {
+          display: none;
+        }
+      }
+    }
+  }
+  .about {
+    flex: 1;
+    position: relative;
+    .circle {
+      width: 10rem;
+      height: 10rem;
+      //   background-color: red;
+      border-radius: 10rem;
+      margin-bottom: 2rem;
+    }
+    .role {
+      font-size: 1.2rem;
+      font-weight: bold;
+      position: absolute;
+      top: 0;
+      left: 4%;
+      text-transform: uppercase;
+      color: var(--dark-dim);
+      span {
+        position: absolute;
+        transform-origin: 0 5rem;
+      }
+      &::before {
+        content: '\A';
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #4ca456;
+        margin: 0 0.7rem;
+        display: inline-block;
+      }
+    }
+    .intro-container {
+      color: var(--primary-color);
+      display: flex;
+      flex-direction: column;
+      //   padding: 4rem;
+      .name {
+        font-size: 4rem;
+        padding: 0.7rem 0;
+        text-transform: uppercase;
+      }
+      .tag {
+        font-family: inherit;
+        &--1 {
+          font-size: 1.4rem;
+        }
+        &--2 {
+          font-size: 3rem;
+        }
+        &--3 {
+          font-weight: 600;
+          color: var(--dark-dim);
+          font-size: 1.6rem;
+          padding-top: 0.8rem;
+        }
+      }
+    }
+  }
+}

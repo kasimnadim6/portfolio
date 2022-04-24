@@ -11,11 +11,16 @@
     &__pic {
       max-width: 40rem;
       height: 50rem;
-      background: url(../../public/profile.jpeg) center center;
+      background: linear-gradient(
+          to bottom right,
+          rgba(#242448, 0.6),
+          rgba(#161648, 0.8)
+        ),
+        url(../../public/profile.jpeg) center center;
       background-size: cover;
       flex: 1;
-      transition: all 0.3s;
-      margin-bottom: 1rem;
+      transition: all 0.6s;
+      box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.4);
       position: relative;
       .name,
       .experience {
@@ -50,7 +55,7 @@
           text-align: start;
           position: absolute;
           //   color: var(--primary-color);
-          top: -8.7rem;
+          top: -8.8rem;
           background: linear-gradient(
             to top left,
             var(--primary-color),
@@ -63,6 +68,12 @@
         .experience {
           display: none;
         }
+      }
+      &:hover {
+        cursor: pointer;
+        transform: translateY(-0.3rem);
+        background: url(../../public/profile.jpeg) center center;
+        background-size: cover;
       }
     }
   }

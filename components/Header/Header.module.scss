@@ -1,0 +1,59 @@
+.header {
+  background-color: var(--white-light-1);
+  //   background-color: aquamarine;
+  max-height: 7rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  //   justify-content: space-between;
+  ul {
+    li {
+      list-style: none;
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+      a {
+        text-decoration: none;
+        color: var(--dark-dim);
+        font-weight: bold;
+      }
+    }
+  }
+  .nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    ul {
+      display: flex;
+      li {
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        font-family: 'League Spartan', sans-serif;
+      }
+    }
+  }
+  .social-icons ul {
+    display: flex;
+    li {
+      font-size: 2.6rem;
+      padding: 1rem;
+      a {
+        .icon {
+          //   font-size: 2rem;
+          &-linkedIn {
+            color: #0e76a8;
+          }
+          &-whatsApp {
+            color: #25d366;
+          }
+          &-gmail {
+            color: #bb001b;
+          }
+          &-github {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}

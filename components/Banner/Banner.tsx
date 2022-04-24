@@ -54,7 +54,7 @@ const Banner = () => {
             building (and occasionally designing) exceptional digital
             experiences. Love to Code.
           </div>
-          {/* <button className={styles['text-me']}>Text Me</button> */}
+          <button className={styles['text-me']}>Text Me</button>
         </div>
       </div>
     </div>

@@ -1,0 +1,25 @@
+@mixin button-style {
+  border: none;
+  border-radius: 50rem;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-image: linear-gradient(
+    to right bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: var(--white-light-1);
+  box-shadow: 0 4px 15px 0 var(--primary-color);
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0 0 0 var(--primary-color);
+  }
+  &:active,
+  &:focus {
+    transform: translateY(-0.1rem);
+  }
+}

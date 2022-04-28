@@ -2,6 +2,8 @@ import styles from './Banner.module.scss';
 import Image from 'next/image';
 import profile from '../../public/sub.jpg';
 import { useEffect } from 'react';
+import { CgArrowLongRight } from 'react-icons/cg';
+import { MdOutlineDoubleArrow } from 'react-icons/md';
 
 const Banner = () => {
   useEffect(() => {
@@ -11,7 +13,7 @@ const Banner = () => {
         .split('')
         .map(
           (char, i) =>
-            `<span style="transform:rotate(${i * 9.5}deg)">${char}</span>`
+            `<span style="transform:rotate(${(i + 1) * 9.5}deg)">${char}</span>`
         )
         .join('');
     }
@@ -54,7 +56,11 @@ const Banner = () => {
             building (and occasionally designing) exceptional digital
             experiences. Love to Code.
           </div>
-          <button className={styles['text-me']}>Text Me</button>
+          <button className={styles['text-me']}>
+            Text Me
+            <MdOutlineDoubleArrow size={18} />
+            {/* <CgArrowLongRight size={24} /> */}
+          </button>
         </div>
       </div>
     </div>

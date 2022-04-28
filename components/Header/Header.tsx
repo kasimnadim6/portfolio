@@ -13,7 +13,8 @@ const Header = () => {
         <meta name="description" content="Mahammad Kasim Nadim Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Image src={logo} alt="Logo" width={70} height={70} />
+      {/* <Image src={logo} alt="Logo" width={100} height={100} /> */}
+      <span className={styles.logo}>Kasim</span>
       <nav className={styles['nav-links']}>
         <ul>
           <li>

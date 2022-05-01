@@ -7,7 +7,11 @@
   padding: 2rem 10rem;
   gap: 2rem;
   .profile {
+    display: flex;
+    justify-content: center;
     flex: 1;
+    perspective: 1000px;
+    padding: 3rem 0;
     &__pic {
       max-width: 40rem;
       height: 50rem;
@@ -16,10 +20,8 @@
       flex: 1;
       transition: all 0.6s;
       box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.4);
+      transform-style: preserve-3d;
       position: relative;
-      &:hover {
-        cursor: pointer;
-      }
       &:before {
         position: absolute;
         top: 0;
@@ -32,6 +34,12 @@
           rgba(#242448, 0.6),
           rgba(#161648, 0.8)
         );
+      }
+      &:hover {
+        cursor: pointer;
+        &::before {
+          background: none;
+        }
       }
       .name,
       .experience {
@@ -65,11 +73,10 @@
           padding: 0.8rem !important;
           text-align: start;
           position: absolute;
-          //   color: var(--primary-color);
-          top: -7.2rem;
+          top: -7.1rem;
           left: 0;
           background: linear-gradient(
-            to top left,
+            to left,
             var(--primary-color),
             var(--tertiary-color)
           );
@@ -83,7 +90,6 @@
     .circle {
       width: 10rem;
       height: 10rem;
-      // background-color: red;
       border-radius: 10rem;
       margin-bottom: 3rem;
       position: relative;
@@ -127,6 +133,15 @@
         &--2 {
           font-size: 3rem;
           text-transform: uppercase;
+          .web {
+            background: linear-gradient(
+              to right bottom,
+              var(--primary-color),
+              var(--tertiary-color)
+            );
+            background-clip: text;
+            color: transparent;
+          }
         }
         &--3 {
           color: var(--dark-dim);
@@ -146,4 +161,19 @@
       }
     }
   }
+}
+.mouse-enter {
+  transition: none;
+  .name {
+    transition: all 0.6s;
+    transform: translateZ(10rem);
+  }
+  .experience {
+    transition: all 0.6s;
+    transform: translateZ(6rem) translateX(3rem) translateY(-3rem);
+  }
+}
+.mouse-leave {
+  transition: all 0, 5s ease-out;
+  transform: rotateX(0) rotateY(0) !important;
 }

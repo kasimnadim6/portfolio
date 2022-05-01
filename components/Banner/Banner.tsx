@@ -1,10 +1,11 @@
 import styles from './Banner.module.scss';
 import Image from 'next/image';
 import profile from '../../public/sub.jpg';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { MdOutlineDoubleArrow } from 'react-icons/md';
 
 const Banner = () => {
+  const [mouseEnter, setMouseEnter] = useState(false);
   useEffect(() => {
     let text = document.getElementById('role');
     if (text != undefined) {
@@ -16,11 +17,26 @@ const Banner = () => {
         )
         .join('');
     }
+    // hover animation on profile
+    const container = document.getElementById('profile');
+    const card = document.getElementById('profile__pic');
+    container?.addEventListener('mousemove', (e) => {
+      const xAxis = (container.clientWidth / 2 - e.pageX) / 15;
+      const yAxis = (container.clientHeight / 2 - e.pageY) / 15;
+      card!.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+    });
+    container?.addEventListener('mouseenter', () => setMouseEnter(true));
+    container?.addEventListener('mouseleave', () => setMouseEnter(false));
   }, []);
   return (
     <div className={styles['banner']}>
-      <div className={styles['profile']}>
-        <div className={styles['profile__pic']}>
+      <div className={styles['profile']} id="profile">
+        <div
+          className={`${styles['profile__pic']} ${
+            mouseEnter ? styles['mouse-enter'] : styles['mouse-leave']
+          }`}
+          id="profile__pic"
+        >
           <div className={styles.name}>
             <span>Mahammad Kasim</span>
           </div>

@@ -2,7 +2,6 @@ import styles from './Banner.module.scss';
 import Image from 'next/image';
 import profile from '../../public/sub.jpg';
 import { useEffect } from 'react';
-import { CgArrowLongRight } from 'react-icons/cg';
 import { MdOutlineDoubleArrow } from 'react-icons/md';
 
 const Banner = () => {
@@ -22,14 +21,6 @@ const Banner = () => {
     <div className={styles['banner']}>
       <div className={styles['profile']}>
         <div className={styles['profile__pic']}>
-          {/* <Image
-          src={profile}
-          alt="profile"
-          //   width={400}
-          //   height={400}
-          layout="fixed"
-
-        /> */}
           <div className={styles.name}>
             <span>Mahammad Kasim</span>
           </div>
@@ -41,9 +32,10 @@ const Banner = () => {
       </div>
 
       <div className={styles['about']}>
-        <div className={styles.circle}></div>
-        <div className={styles.role} id="role">
-          Front-end Developer
+        <div className={styles.circle}>
+          <div className={styles.role} id="role">
+            Front-end Developer
+          </div>
         </div>
         <div className={styles['intro-container']}>
           <span className={styles['tag--1']}>Hi, My name is</span>

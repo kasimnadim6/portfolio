@@ -54,7 +54,7 @@ const Banner = () => {
           <div className={`${styles['tag--3']}`}>
             I’m a Front-End Web developer based in Mangalore specializing in
             building (and occasionally designing) exceptional digital
-            experiences. Love to Code.
+            experiences and I Love to Code.
           </div>
           <button className={styles['text-me']}>
             Text Me

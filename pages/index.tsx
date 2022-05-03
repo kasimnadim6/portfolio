@@ -4,6 +4,7 @@ import Header from '../components/Header/Header';
 import styles from './Home.module.scss';
 import { CgShapeHalfCircle } from 'react-icons/cg';
 import Banner from '../components/Banner/Banner';
+import Footer from '../components/Footer/Footer';
 
 const Home: NextPage = () => {
   return (
@@ -35,6 +36,7 @@ const Home: NextPage = () => {
           </a>
         </footer> */}
       </div>
+      <Footer />
     </>
   );
 };

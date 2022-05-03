@@ -1,0 +1,57 @@
+.footer {
+  // height: 20rem;
+  background-color: var(--black-shade-1);
+  padding: 3rem;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .logo {
+      font-size: 8rem;
+      font-family: 'Water Brush', cursive;
+      background: linear-gradient(
+        150deg,
+        #000048,
+        #041962,
+        #093d7a,
+        #11698f,
+        #1b99a3,
+        #26b59e,
+        #34c48c,
+        #50c67d
+      );
+      background-clip: text;
+      color: transparent;
+    }
+    .connect-me {
+      display: flex;
+      font-size: 2rem;
+      list-style: none;
+      padding: 3rem 2rem;
+      gap: 3rem;
+      li {
+        display: flex;
+        justify-content: center;
+        min-width: 10rem;
+        a {
+          text-decoration: none;
+          color: var(--white);
+          font-weight: lighter;
+          transition: all 0.5s ease-in-out;
+          padding: 2rem;
+          &:hover {
+            cursor: pointer;
+            color: var(--tertiary-color);
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+    .copyright {
+      color: var(--white);
+      font-size: 1.6rem;
+      font-weight: lighter;
+    }
+  }
+}

@@ -85,6 +85,9 @@ const Header = () => {
             <a href="#">Work</a>
           </motion.li>
           <motion.li whileHover={linkVariants}>
+            <a href="#">Experiments</a>
+          </motion.li>
+          <motion.li whileHover={linkVariants}>
             <a href="#">Contact</a>
           </motion.li>
         </motion.ul>

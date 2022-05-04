@@ -4,99 +4,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 10rem;
-  gap: 2rem;
-  .profile {
-    display: flex;
-    justify-content: center;
-    flex: 1;
-    perspective: 1000px;
-    padding: 3rem 0;
-    &:hover .profile__pic {
-      &::before {
-        background: none;
-      }
-    }
-    &__pic {
-      max-width: 40rem;
-      height: 50rem;
-      background: url(../../public/profile.jpeg) center bottom;
-      background-size: cover;
-      flex: 1;
-      transition: all 0.6s;
-      box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.4);
-      transform-style: preserve-3d;
-      position: relative;
-      &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        content: '';
-        background: linear-gradient(
-          150deg,
-          rgba(#242448, 0.6),
-          rgba(#161648, 0.8)
-        );
-      }
-      .name,
-      .experience {
-        position: absolute;
-        background: linear-gradient(
-          150deg,
-          #000048,
-          #041962,
-          #093d7a,
-          #11698f,
-          #1b99a3,
-          #26b59e,
-          #34c48c,
-          #50c67d
-        );
-        font-size: 2rem;
-        letter-spacing: 1px;
-        font-family: inherit;
-        font-weight: bold;
-        text-transform: uppercase;
-        color: #f2f2f2;
-        width: 50%;
-        padding: 1.2rem;
-        text-align: end;
-        span {
-          box-decoration-break: clone;
-        }
-      }
-      .name {
-        right: 0;
-      }
-      .experience {
-        bottom: 0;
-        &-year {
-          font-size: 6rem;
-          display: block;
-          padding: 0.8rem !important;
-          text-align: start;
-          position: absolute;
-          top: -7.1rem;
-          left: 0;
-          background: linear-gradient(
-            150deg,
-            #000048,
-            #041962,
-            #093d7a,
-            #11698f,
-            #1b99a3,
-            #26b59e,
-            #34c48c,
-            #50c67d
-          );
-        }
-      }
-    }
-  }
+  padding: 2rem 15rem;
+  min-height: calc(100vh - 7rem);
+
   .about {
-    flex: 1;
     font-weight: bold;
     .circle {
       width: 10rem;
@@ -130,9 +41,8 @@
       color: var(--primary-color);
       display: flex;
       flex-direction: column;
-      //   padding: 4rem;
       .name {
-        font-size: 4rem;
+        font-size: 7rem;
         padding: 0.7rem 0;
         text-transform: uppercase;
         text-shadow: 1px 1px 1px var(--primary-color);
@@ -140,34 +50,43 @@
       .tag {
         font-family: inherit;
         &--1 {
-          font-size: 1.4rem;
+          font-size: 1.8rem;
+          line-height: 1.7;
         }
         &--2 {
-          font-size: 3rem;
+          font-size: 6rem;
           text-transform: uppercase;
           position: relative;
           .web {
             position: absolute;
             margin-left: 1rem;
             background: linear-gradient(
-              to right bottom,
-              var(--primary-color),
-              var(--tertiary-color)
+              150deg,
+              #000048,
+              #041962,
+              #093d7a,
+              #11698f,
+              #1b99a3,
+              #26b59e,
+              #34c48c,
+              #50c67d
             );
             background-clip: text;
             color: transparent;
           }
         }
         &--3 {
+          width: 50%;
           color: var(--dark-dim);
-          font-size: 1.6rem;
+          font-size: 1.8rem;
+          line-height: 1.4;
           padding-top: 0.8rem;
         }
       }
       .text-me {
-        padding: 1.4rem;
+        padding: 1.2rem;
         margin-top: 2.8rem;
-        width: 16rem;
+        width: 18rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -176,19 +95,4 @@
       }
     }
   }
-}
-.mouse-enter {
-  transition: none;
-  .name {
-    transition: all 0.6s;
-    transform: translateZ(10rem) translateX(-2rem) translateY(2rem);
-  }
-  .experience {
-    transition: all 0.6s;
-    transform: translateZ(10rem) translateX(2rem) translateY(-2rem);
-  }
-}
-.mouse-leave {
-  transition: all 0, 5s ease-out;
-  transform: rotateX(0) rotateY(0) !important;
 }

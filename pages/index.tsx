@@ -6,6 +6,7 @@ import { CgShapeHalfCircle } from 'react-icons/cg';
 import Banner from '../components/Banner/Banner';
 import Footer from '../components/Footer/Footer';
 import { AnimatePresence } from 'framer-motion';
+import About from '../components/About/About';
 
 const Home: NextPage = () => {
   return (
@@ -17,6 +18,7 @@ const Home: NextPage = () => {
             <CgShapeHalfCircle />
           </span> */}
           <Banner />
+          <About />
         </main>
 
         {/* <footer className={styles.footer}>

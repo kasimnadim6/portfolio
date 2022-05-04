@@ -50,3 +50,14 @@ export const appear = {
     },
   },
 };
+export const glowingText = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    color: '#1d1d48',
+    transition: {
+      repeat: Infinity,
+      duration: 1,
+    },
+  },
+};

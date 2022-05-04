@@ -3,6 +3,13 @@ import Image from 'next/image';
 import profile from '../../public/sub.jpg';
 import { useEffect, useState } from 'react';
 import { MdOutlineDoubleArrow } from 'react-icons/md';
+import { motion } from 'framer-motion';
+import {
+  appear,
+  arrowMovement,
+  fall,
+  rightToLeftFlow,
+} from '../../animations/animations';
 
 const Banner = () => {
   const [mouseEnter, setMouseEnter] = useState(false);
@@ -31,20 +38,23 @@ const Banner = () => {
   return (
     <div className={styles['banner']}>
       <div className={styles['profile']} id="profile">
-        <div
+        <motion.div
+          variants={appear}
+          initial="initial"
+          animate="animate"
           className={`${styles['profile__pic']} ${
             mouseEnter ? styles['mouse-enter'] : styles['mouse-leave']
           }`}
           id="profile__pic"
         >
-          <div className={styles.name}>
+          <motion.div variants={appear} className={styles.name}>
             <span>Mahammad Kasim</span>
-          </div>
-          <div className={styles.experience}>
+          </motion.div>
+          <motion.div variants={appear} className={styles.experience}>
             <span className={styles['experience-year']}>4</span>
             <span>Years Of Experience</span>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
 
       <div className={styles['about']}>
@@ -57,7 +67,15 @@ const Banner = () => {
           <span className={styles['tag--1']}>Hi, My name is</span>
           <h1 className={styles.name}>Mahammad Kasim Nadim.</h1>
           <h2 className={`${styles['tag--2']} text-background-clip`}>
-            I build things for the <span className={styles.web}>Web.</span>
+            I build things for the{' '}
+            <motion.span
+              variants={rightToLeftFlow}
+              initial="initial"
+              animate="animate"
+              className={styles.web}
+            >
+              Web.
+            </motion.span>
           </h2>
           <div className={`${styles['tag--3']}`}>
             I’m a Front-End Web developer based in Mangalore specializing in
@@ -66,7 +84,13 @@ const Banner = () => {
           </div>
           <button className={styles['text-me']}>
             Text Me
-            <MdOutlineDoubleArrow size={18} />
+            <motion.span
+              variants={arrowMovement}
+              initial="initial"
+              animate="animate"
+            >
+              <MdOutlineDoubleArrow size={18} />
+            </motion.span>
             {/* <CgArrowLongRight size={24} /> */}
           </button>
         </div>

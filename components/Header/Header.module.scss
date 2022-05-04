@@ -15,9 +15,15 @@
     font-family: 'Water Brush', cursive;
     color: var(--primary-color);
     background: linear-gradient(
-      to right bottom,
-      var(--primary-color),
-      var(--tertiary-color)
+      150deg,
+      #000048,
+      #041962,
+      #093d7a,
+      #11698f,
+      #1b99a3,
+      #26b59e,
+      #34c48c,
+      #50c67d
     );
     background-clip: text;
     color: transparent;
@@ -38,7 +44,7 @@
           margin-right: 1rem;
         }
         &:hover {
-          transform: translateY(-0.2rem);
+          // transform: translateY(-0.2rem);
           a {
             color: var(--primary-color);
           }
@@ -77,7 +83,7 @@
   }
 }
 .shadow {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 3px 6px rgba(0, 0, 0, 0.2);
 }
 .hide-header {
   transform: translateY(-10vh);

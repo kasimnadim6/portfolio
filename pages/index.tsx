@@ -5,10 +5,11 @@ import styles from './Home.module.scss';
 import { CgShapeHalfCircle } from 'react-icons/cg';
 import Banner from '../components/Banner/Banner';
 import Footer from '../components/Footer/Footer';
+import { AnimatePresence } from 'framer-motion';
 
 const Home: NextPage = () => {
   return (
-    <>
+    <AnimatePresence>
       <Header />
       <div className={styles.container}>
         <main className={styles.main}>
@@ -37,7 +38,7 @@ const Home: NextPage = () => {
         </footer> */}
       </div>
       <Footer />
-    </>
+    </AnimatePresence>
   );
 };
 

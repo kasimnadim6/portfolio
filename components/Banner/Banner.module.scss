@@ -112,7 +112,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       text-transform: uppercase;
-      color: var(--dark-dim);
+      color: var(--primary-color);
       span {
         position: absolute;
         transform-origin: 0 5rem;
@@ -145,7 +145,10 @@
         &--2 {
           font-size: 3rem;
           text-transform: uppercase;
+          position: relative;
           .web {
+            position: absolute;
+            margin-left: 1rem;
             background: linear-gradient(
               to right bottom,
               var(--primary-color),

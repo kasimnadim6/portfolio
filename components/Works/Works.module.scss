@@ -1,0 +1,119 @@
+.works {
+  padding: 2rem 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    to bottom right,
+    rgba(#4e4c51, 0.9),
+    rgba(#fff, 0.8)
+  );
+  .heading {
+    font-size: 3.6rem;
+    line-height: 1.7;
+    color: var(--white);
+    text-shadow: 1px 1px 2px rgba(#ffff, 0.4);
+  }
+  .container {
+    width: 100%;
+    padding: 4rem;
+    .project {
+      width: 100%;
+      height: 50rem;
+      background-color: #000;
+      color: var(--black);
+      padding: 3rem 3rem 5rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      background: url(../../public/project-1.png) center center;
+      background-size: cover;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+      transition: all 0.5s;
+      position: relative;
+      perspective: 1000px;
+      z-index: 10;
+      transition: all 0.5s;
+
+      &::before {
+        content: attr(data-index);
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 20rem;
+        font-weight: 900;
+        color: var(--white-light-1);
+        z-index: 100;
+        transition: all 0.5s;
+      }
+      &:hover {
+        &::before {
+          background: linear-gradient(
+            150deg,
+            #000048,
+            #041962,
+            #093d7a,
+            #11698f,
+            #1b99a3,
+            #26b59e,
+            #34c48c,
+            #50c67d
+          );
+          background-clip: text;
+          color: transparent;
+          transition: all 0.5s;
+        }
+        .shadow {
+          background: rgba(#000, 0.9);
+        }
+        .project__info {
+          transform: translateZ(6rem) translateX(3rem);
+        }
+      }
+      &__info {
+        width: 50%;
+        padding: 3rem;
+        color: var(--white-light-1);
+        z-index: 100;
+        transition: all 0.5s;
+        .title {
+          font-size: 4.2rem;
+          line-height: 1.2;
+        }
+        .description {
+          text-align: justify;
+          font-size: 1.8rem;
+          font-weight: 400;
+        }
+        .explore-links {
+          display: flex;
+          align-items: baseline;
+          gap: 1rem;
+          margin-top: 1rem;
+          .icon {
+            color: var(--white-light-1);
+            &-github {
+              font-size: 2.4rem;
+            }
+            &-link {
+              font-size: 2.8rem;
+            }
+          }
+        }
+      }
+      .shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      li {
+        list-style: none;
+      }
+    }
+  }
+}

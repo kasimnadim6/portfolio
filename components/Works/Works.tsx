@@ -15,11 +15,11 @@ const Works = () => {
             <h4 className={styles['description']}>
               here comes short description about the project mentioned above.
             </h4>
-            <motion.ul
+            <ul
               className={styles['explore-links']}
-              variants={glowingText}
-              initial="initial"
-              animate="animate"
+              //   variants={glowingText}
+              //   initial="initial"
+              //   animate="animate"
             >
               <li>
                 <a href="#">
@@ -35,7 +35,7 @@ const Works = () => {
                   />
                 </a>
               </li>
-            </motion.ul>
+            </ul>
           </div>
           <div className={styles.shadow}></div>
         </li>

@@ -1,10 +1,10 @@
-import styles from './Works.module.scss';
+import styles from './LatestWorks.module.scss';
 import { HiExternalLink } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { appear, glowingText } from '../../animations/animations';
 
-const Works = () => {
+const LatestWorks = () => {
   const projects = [
     {
       id: '1',
@@ -88,4 +88,4 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default LatestWorks;

@@ -16,18 +16,20 @@
   }
   .container {
     width: 100%;
-    padding: 4rem;
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    border-left: 1px dotted #000048;
+    border-right: 1px dotted #000048;
     .project {
       width: 100%;
       height: 50rem;
-      background-color: #000;
       color: var(--black);
       padding: 3rem 3rem 5rem 3rem;
       display: flex;
       flex-direction: column;
       justify-content: end;
-      background: url(../../public/project-01.png) center center;
-      background-size: cover;
       box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
         rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
       transition: all 0.5s;
@@ -35,17 +37,35 @@
       perspective: 1000px;
       z-index: 10;
       transition: all 0.5s;
-
-      &::before {
-        content: attr(data-index);
-        display: none;
-        position: absolute;
-        top: 0%;
-        right: 0%;
-        font-size: 20rem;
-        font-weight: 900;
-        z-index: 100;
-        transition: all 0.5s;
+      &:nth-child(odd) {
+        left: 5rem;
+        &::before {
+          content: attr(data-index);
+          display: none;
+          position: absolute;
+          top: 0%;
+          right: 0%;
+          font-size: 20rem;
+          font-weight: 900;
+          z-index: 100;
+          transition: all 0.5s;
+          transform: translate(15%, -15%);
+        }
+      }
+      &:nth-child(even) {
+        right: 5rem;
+        &::before {
+          content: attr(data-index);
+          display: none;
+          position: absolute;
+          top: 0%;
+          left: -5rem;
+          font-size: 20rem;
+          font-weight: 900;
+          z-index: 100;
+          transition: all 0.5s;
+          transform: translate(15%, -15%);
+        }
       }
       &:hover {
         &::before {
@@ -64,6 +84,7 @@
           background-clip: text;
           color: transparent;
           transition: all 0.5s;
+          z-index: 100;
         }
         .shadow {
           background: rgba(#000, 0.9);
@@ -96,10 +117,10 @@
           margin-top: 1rem;
           .icon {
             color: var(--white-light-1);
-            &-github {
+            &-gitHub {
               font-size: 2.4rem;
             }
-            &-link {
+            &-Website {
               font-size: 2.8rem;
             }
           }

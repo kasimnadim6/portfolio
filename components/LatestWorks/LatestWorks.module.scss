@@ -110,6 +110,23 @@
           font-size: 1.8rem;
           font-weight: 400;
         }
+        .technology-used {
+          line-height: 1.2;
+          margin-top: 3px;
+          p {
+            font-size: 1.8rem;
+          }
+          ul {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 1.6rem;
+            font-weight: bold;
+            li:not(:last-child) {
+              width: 50%;
+              padding-right: 1rem;
+            }
+          }
+        }
         .explore-links {
           display: flex;
           align-items: baseline;

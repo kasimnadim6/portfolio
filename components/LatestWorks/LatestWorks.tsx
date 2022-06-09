@@ -1,6 +1,7 @@
 import styles from './LatestWorks.module.scss';
 import { HiExternalLink } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
+import { RiArrowDropRightFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import { appear, glowingText } from '../../animations/animations';
 
@@ -10,8 +11,8 @@ const LatestWorks = () => {
       id: '1',
       backGroundImage: 'Wildlife.png',
       projectName: 'Wild Nature',
-      description:
-        'here comes short description about the project mentioned above.',
+      description: `It's tour planner website.`,
+      usedTechnology: ['HTML5', 'CSS3'],
       gitHubLink: 'https://github.com/kasimnadim6/Natours',
       websiteLink: 'https://wildnature.netlify.app',
     },
@@ -19,8 +20,15 @@ const LatestWorks = () => {
       id: '2',
       backGroundImage: 'NetflixClone.png',
       projectName: 'Netflix Clone',
-      description:
-        'here comes short description about the project mentioned above.',
+      description: `It's a clone of Netflix.`,
+      usedTechnology: [
+        'ReactJS',
+        'HTML5',
+        'CSS3',
+        'SASS',
+        'Strip: for payment',
+        `Firebase`,
+      ],
       gitHubLink: 'https://github.com/kasimnadim6/netflix',
       websiteLink: 'https://netflix-de158.firebaseapp.com/',
     },
@@ -28,8 +36,8 @@ const LatestWorks = () => {
       id: '3',
       backGroundImage: 'FlightService.png',
       projectName: 'Flight Management',
-      description:
-        'here comes short description about the project mentioned above.',
+      description: `It's a flight managing app. where you login as staff/admin and do some cool stuff.`,
+      usedTechnology: ['Angular', 'HTML5', 'CSS3'],
       gitHubLink: 'https://github.com/kasimnadim6/flightService',
       websiteLink: 'https://flightsvc.netlify.app',
     },
@@ -54,6 +62,14 @@ const LatestWorks = () => {
             <div className={styles['project__info']}>
               <h2 className={styles['title']}>{project.projectName}</h2>
               <h4 className={styles['description']}>{project.description}</h4>
+              <div className={styles['technology-used']}>
+                <p>Used Technologies are</p>
+                <ul>
+                  {project.usedTechnology?.map((tech) => (
+                    <li key={tech}>{tech}</li>
+                  ))}
+                </ul>
+              </div>
               <ul
                 className={styles['explore-links']}
                 //   variants={glowingText}

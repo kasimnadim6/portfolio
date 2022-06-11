@@ -9,6 +9,7 @@ import { AnimatePresence } from 'framer-motion';
 import About from '../components/About/About';
 import LatestWorks from '../components/LatestWorks/LatestWorks';
 import FunProjects from '../components/FunProjects/FunProjects';
+import Contact from '../components/Contact/Contact';
 
 const Home: NextPage = () => {
   return (
@@ -22,7 +23,8 @@ const Home: NextPage = () => {
           <Banner />
           <About />
           <LatestWorks />
-          <FunProjects />
+          {/* <FunProjects /> */}
+          <Contact />
         </main>
 
         {/* <footer className={styles.footer}>

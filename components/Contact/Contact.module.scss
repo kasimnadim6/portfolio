@@ -1,0 +1,40 @@
+.contact {
+  padding: 10rem 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
+  .sub-heading {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    background: linear-gradient(
+      150deg,
+      #000048,
+      #041962,
+      #093d7a,
+      #11698f,
+      #1b99a3,
+      #26b59e,
+      #34c48c,
+      #50c67d
+    );
+    background-clip: text;
+    color: transparent;
+  }
+  .heading {
+    font-size: 6rem;
+    font-weight: bold;
+    margin-bottom: 1.4rem;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 1px var(--primary-color);
+  }
+  .message {
+    font-size: 1.8rem;
+    width: 75%;
+    margin-bottom: 2.8rem;
+    text-align: center;
+  }
+}

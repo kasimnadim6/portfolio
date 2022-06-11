@@ -3,6 +3,7 @@ import { MdOutlineDoubleArrow } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import { arrowMovement, rightToLeftFlow } from '../../animations/animations';
 import { FaCode } from 'react-icons/fa';
+import Button from '../Shared/Button';
 
 const Banner = () => {
   return (
@@ -33,17 +34,7 @@ const Banner = () => {
             building (and occasionally designing) exceptional digital
             experiences and I Love to Code.
           </div>
-          <button className={styles['text-me']}>
-            Text Me
-            <motion.span
-              variants={arrowMovement}
-              initial="initial"
-              animate="animate"
-            >
-              <MdOutlineDoubleArrow size={18} />
-            </motion.span>
-            {/* <CgArrowLongRight size={24} /> */}
-          </button>
+          <Button>Text Me</Button>
         </div>
       </div>
     </div>

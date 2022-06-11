@@ -2,6 +2,7 @@ import styles from './Banner.module.scss';
 import { MdOutlineDoubleArrow } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import { arrowMovement, rightToLeftFlow } from '../../animations/animations';
+import { FaCode } from 'react-icons/fa';
 
 const Banner = () => {
   return (
@@ -11,6 +12,7 @@ const Banner = () => {
           <div className={styles.role} id="role">
             Front-end Developer
           </div>
+          <FaCode className={styles['icon-code']} />
         </div>
         <div className={styles['intro-container']}>
           <span className={styles['tag--1']}>Hi, My name is</span>

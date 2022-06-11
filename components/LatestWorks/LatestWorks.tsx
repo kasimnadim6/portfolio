@@ -4,6 +4,7 @@ import { FaGithub } from 'react-icons/fa';
 import { RiArrowDropRightFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
 import { appear, glowingText } from '../../animations/animations';
+import { FcNext } from 'react-icons/fc';
 
 const LatestWorks = () => {
   const projects = [
@@ -66,7 +67,10 @@ const LatestWorks = () => {
                 <p>Used Technologies are</p>
                 <ul>
                   {project.usedTechnology?.map((tech) => (
-                    <li key={tech}>{tech}</li>
+                    <li key={tech}>
+                      <FcNext className={styles['icon-next']} />
+                      <span>{tech}</span>
+                    </li>
                   ))}
                 </ul>
               </div>

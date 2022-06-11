@@ -2,7 +2,7 @@ import styles from './Header.module.scss';
 import Head from 'next/head';
 import Image from 'next/image';
 import { BsLinkedin, BsWhatsapp, BsGithub } from 'react-icons/bs';
-import { SiGmail } from 'react-icons/si';
+import { SiGmail, SiCoderwall } from 'react-icons/si';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { fall, linkVariants } from '../../animations/animations';
@@ -73,6 +73,7 @@ const Header = () => {
       >
         Kasim
       </motion.span>
+      <SiCoderwall className={styles['icon-logo']} />
       <nav className={styles['nav-links']}>
         <motion.ul variants={fall} initial="initial" animate="animate">
           <motion.li whileHover={linkVariants}>

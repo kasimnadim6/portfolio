@@ -121,9 +121,13 @@
             flex-wrap: wrap;
             font-size: 1.6rem;
             font-weight: bold;
-            li:not(:last-child) {
-              width: 50%;
+            li {
               padding-right: 1rem;
+              width: 50%;
+              .icon-next {
+                margin-right: 2px;
+                font-size: 1.2rem;
+              }
             }
           }
         }

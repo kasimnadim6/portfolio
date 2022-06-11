@@ -2,6 +2,9 @@ import styles from './About.module.scss';
 import { motion } from 'framer-motion';
 import { appear, glowingText } from '../../animations/animations';
 import { useEffect, useState } from 'react';
+import { FaHtml5, FaCss3Alt, FaAngular, FaReact } from 'react-icons/fa';
+import { IoLogoJavascript } from 'react-icons/io';
+import { SiTypescript, SiNextdotjs } from 'react-icons/si';
 
 const About = () => {
   const [mouseEnter, setMouseEnter] = useState(false);
@@ -50,24 +53,10 @@ const About = () => {
             </a>
           </p>
           <p>
-            Fast-forward to today, I&apos;am an Ex{' '}
-            <motion.span
-              variants={glowingText}
-              initial="initial"
-              animate="animate"
-            >
-              Mindtree{' '}
-            </motion.span>
-            Mind and currently working for{' '}
-            <motion.span
-              variants={glowingText}
-              initial="initial"
-              animate="animate"
-            >
-              Cognizant
-            </motion.span>
-            . I&apos;ve had the privilege of working in real time project from
-            scratch which gave me a big picture in overall development process.
+            Fast-forward to today, I&apos;am an Ex Mindtree Mind and currently
+            working for Cognizant . I&apos;ve had the privilege of working in
+            real time project from scratch which gave me a big picture in
+            overall development process.
           </p>
           <p>
             I don&apos;t like to define myself by the work I&apos;ve done. I
@@ -79,6 +68,50 @@ const About = () => {
             <h3 className={styles['sub-heading']}>
               Here are a few technologies I&apos;ve been working with recently:
             </h3>
+            <ul>
+              <li>
+                <span>
+                  <FaHtml5 className={styles.icon} />
+                  HTML5
+                </span>
+              </li>
+              <li>
+                <span>
+                  <FaCss3Alt className={styles.icon} />
+                  CSS3
+                </span>
+              </li>
+              <li>
+                <span>
+                  <IoLogoJavascript className={styles.icon} />
+                  Javascript
+                </span>
+              </li>
+              <li>
+                <span>
+                  <FaAngular className={styles.icon} />
+                  Angular
+                </span>
+              </li>
+              <li>
+                <span>
+                  <FaReact className={styles.icon} />
+                  ReactJS
+                </span>
+              </li>
+              <li>
+                <span>
+                  <SiTypescript className={styles.icon} />
+                  Typescript
+                </span>
+              </li>
+              <li>
+                <span>
+                  <SiNextdotjs className={styles.icon} />
+                  NextJS
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
         {/* <div className={styles['tech-stacks']}>Tech stack</div> */}

@@ -36,7 +36,7 @@ const About = () => {
   }, []);
 
   return (
-    <section className={styles.about}>
+    <section id="about" className={styles.about}>
       <h2 className={styles.heading}>About Me</h2>
       <div className={styles.container}>
         <div className={styles['about-me']}>

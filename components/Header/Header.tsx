@@ -3,9 +3,14 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { BsLinkedin, BsWhatsapp, BsGithub } from 'react-icons/bs';
 import { SiGmail, SiCoderwall } from 'react-icons/si';
-import { useEffect, useState } from 'react';
+import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { fall, linkVariants } from '../../animations/animations';
+import {
+  fall,
+  fallItem,
+  linkVariants,
+  rightToLeftFlow,
+} from '../../animations/animations';
 
 const Header = () => {
   const [scroll, setScroll] = useState({
@@ -54,6 +59,16 @@ const Header = () => {
     });
   }, [scroll.curScroll, scroll.direction, scroll.prevDirection]);
 
+  const navigationHandler = (e: BaseSyntheticEvent) => {
+    e.preventDefault();
+    const target = e.target.textContent + '';
+    document.getElementById(target?.toLocaleLowerCase())?.scrollIntoView({
+      behavior: 'smooth',
+      // block: 'center',
+      // inline: 'center',
+    });
+  };
+
   return (
     <header
       className={`${styles.header} ${
@@ -65,31 +80,46 @@ const Header = () => {
         <meta name="description" content="Mahammad Kasim Nadim Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <motion.span
+      <motion.div
         variants={fall}
         initial="initial"
         animate="animate"
-        className={styles.logo}
+        className={styles['logo-box']}
       >
-        Kasim
-      </motion.span>
-      <SiCoderwall className={styles['icon-logo']} />
+        <motion.div variants={fallItem} className={styles.logo}>
+          Kasim
+        </motion.div>
+        <motion.div variants={fallItem}>
+          <SiCoderwall className={styles['icon-logo']} />
+        </motion.div>
+      </motion.div>
+
       <nav className={styles['nav-links']}>
         <motion.ul variants={fall} initial="initial" animate="animate">
-          <motion.li whileHover={linkVariants}>
-            <a href="#">About</a>
+          <motion.li variants={fallItem} whileHover={linkVariants}>
+            <a href="#" onClick={navigationHandler}>
+              About
+            </a>
           </motion.li>
-          <motion.li whileHover={linkVariants}>
-            <a href="#">Experience</a>
+          <motion.li variants={fallItem} whileHover={linkVariants}>
+            <a href="#" onClick={navigationHandler}>
+              Experience
+            </a>
           </motion.li>
-          <motion.li whileHover={linkVariants}>
-            <a href="#">Work</a>
+          <motion.li variants={fallItem} whileHover={linkVariants}>
+            <a href="#" onClick={navigationHandler}>
+              Work
+            </a>
           </motion.li>
-          <motion.li whileHover={linkVariants}>
-            <a href="#">Experiments</a>
+          <motion.li variants={fallItem} whileHover={linkVariants}>
+            <a href="#" onClick={navigationHandler}>
+              Experiments
+            </a>
           </motion.li>
-          <motion.li whileHover={linkVariants}>
-            <a href="#">Contact</a>
+          <motion.li variants={fallItem} whileHover={linkVariants}>
+            <a href="#" onClick={navigationHandler}>
+              Contact
+            </a>
           </motion.li>
         </motion.ul>
       </nav>

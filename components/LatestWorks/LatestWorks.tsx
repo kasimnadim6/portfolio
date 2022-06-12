@@ -44,7 +44,7 @@ const LatestWorks = () => {
     },
   ];
   return (
-    <section className={styles.works}>
+    <section id="work" className={styles.works}>
       <h2 className={styles.heading}>Latest Works</h2>
       <ul className={styles['container']}>
         {projects.map((project) => (

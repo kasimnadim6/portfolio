@@ -7,7 +7,7 @@ import Button from '../Shared/Button';
 
 const Contact = () => {
   return (
-    <section className={styles.contact}>
+    <section id="contact" className={styles.contact}>
       <span className={styles['sub-heading']}>{`What's next ?`}</span>
       <span className={styles['heading']}>Get In Touch</span>
       <span

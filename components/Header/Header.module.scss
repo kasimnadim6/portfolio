@@ -10,27 +10,31 @@
   display: flex;
   align-items: center;
   //   justify-content: space-between;
-  .logo {
-    font-size: 4rem;
-    font-family: 'Water Brush', cursive;
-    color: var(--primary-color);
-    background: linear-gradient(
-      150deg,
-      #000048,
-      #041962,
-      #093d7a,
-      #11698f,
-      #1b99a3,
-      #26b59e,
-      #34c48c,
-      #50c67d
-    );
-    background-clip: text;
-    color: transparent;
-  }
-  .icon-logo {
-    font-size: 3.5rem;
-    opacity: 0.7;
+  .logo-box {
+    display: flex;
+    align-items: center;
+    .logo {
+      font-size: 4rem;
+      font-family: 'Water Brush', cursive;
+      color: var(--primary-color);
+      background: linear-gradient(
+        150deg,
+        #000048,
+        #041962,
+        #093d7a,
+        #11698f,
+        #1b99a3,
+        #26b59e,
+        #34c48c,
+        #50c67d
+      );
+      background-clip: text;
+      color: transparent;
+    }
+    .icon-logo {
+      font-size: 3rem;
+      opacity: 0.7;
+    }
   }
   .nav-links {
     flex: 1;

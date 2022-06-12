@@ -9,8 +9,17 @@ export const fall = {
       mass: 1,
       damping: 10,
       stiffness: 200,
-      staggerChildren: 0.2,
+      staggerChildren: 0.1,
+      // delayChildren: 0.4,
     },
+  },
+};
+export const fallItem = {
+  initial: {
+    y: -100,
+  },
+  animate: {
+    y: 0,
   },
 };
 

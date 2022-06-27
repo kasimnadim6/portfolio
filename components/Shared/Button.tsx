@@ -6,13 +6,18 @@ import { ReactNode } from 'react';
 
 interface Props {
   children?: ReactNode;
-  // any props that come into the component
+  onClick?: () => any;
 }
-const Button = ({ children }: Props) => {
+const Button = ({ children, onClick }: Props) => {
   return (
     <button className={styles.btn}>
       {children}
-      <motion.span variants={arrowMovement} initial="initial" animate="animate">
+      <motion.span
+        variants={arrowMovement}
+        initial="initial"
+        animate="animate"
+        onClick={onClick}
+      >
         <MdOutlineDoubleArrow size={18} />
       </motion.span>
     </button>

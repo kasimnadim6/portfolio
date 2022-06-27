@@ -1,5 +1,4 @@
 .container {
-  // padding: 0 2rem;
   background: linear-gradient(
     to bottom,
     var(--white-light-1),
@@ -9,20 +8,13 @@
   position: relative;
 
   .main {
-    // padding: 2rem 15rem;
     margin-top: 7rem;
-    // flex: 1;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
-    // align-items: center;
     .icon {
       position: absolute;
       bottom: -22.7rem;
       left: -25rem;
       transform: rotate(270deg);
       font-size: 120rem;
-      // background: linear-gradient(#c3aca7, #ddccbf);
       z-index: 10;
     }
   }

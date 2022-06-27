@@ -1,13 +1,20 @@
 import styles from './Banner.module.scss';
-import { MdOutlineDoubleArrow } from 'react-icons/md';
 import { motion } from 'framer-motion';
-import { arrowMovement, rightToLeftFlow } from '../../animations/animations';
+import { appear, rightToLeftFlow } from '../../animations/animations';
 import { FaCode } from 'react-icons/fa';
 import Button from '../Shared/Button';
 
 const Banner = () => {
+  const whatsAppMe = () => {
+    window.open('https://wa.me/+918861321329', '_blank');
+  };
   return (
-    <div className={styles['banner']}>
+    <motion.div
+      variants={appear}
+      initial="initial"
+      animate="animate"
+      className={styles['banner']}
+    >
       <div className={styles['about']}>
         <div className={styles.circle}>
           <div className={styles.role} id="role">
@@ -34,10 +41,10 @@ const Banner = () => {
             building (and occasionally designing) exceptional digital
             experiences and I Love to Code.
           </div>
-          <Button>Text Me</Button>
+          <Button onClick={whatsAppMe}>Text Me</Button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

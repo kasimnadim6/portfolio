@@ -1,11 +1,11 @@
 import styles from './Contact.module.scss';
 import React from 'react';
-import { motion } from 'framer-motion';
-import { MdOutlineDoubleArrow } from 'react-icons/md';
-import { arrowMovement } from '../../animations/animations';
 import Button from '../Shared/Button';
 
 const Contact = () => {
+  const whatsAppMe = () => {
+    window.open('https://wa.me/+918861321329', '_blank');
+  };
   return (
     <section id="contact" className={styles.contact}>
       <span className={styles['sub-heading']}>{`What's next ?`}</span>
@@ -13,7 +13,7 @@ const Contact = () => {
       <span
         className={styles['message']}
       >{`Dropping a line to say g’day, or you have a question or just want to say hi or see if we can build something amazing together? I’d love to hear from you!`}</span>
-      <Button>Contact Me</Button>
+      <Button onClick={whatsAppMe}>Contact Me</Button>
     </section>
   );
 };

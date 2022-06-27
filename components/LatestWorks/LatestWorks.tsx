@@ -1,9 +1,8 @@
 import styles from './LatestWorks.module.scss';
 import { HiExternalLink } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
-import { RiArrowDropRightFill } from 'react-icons/ri';
 import { motion } from 'framer-motion';
-import { appear, glowingText } from '../../animations/animations';
+import { appear } from '../../animations/animations';
 import { FcNext } from 'react-icons/fc';
 
 const LatestWorks = () => {

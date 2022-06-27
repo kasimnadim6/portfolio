@@ -1,6 +1,6 @@
 import styles from './About.module.scss';
 import { motion } from 'framer-motion';
-import { appear, glowingText } from '../../animations/animations';
+import { appear } from '../../animations/animations';
 import { useEffect, useState } from 'react';
 import { FaHtml5, FaCss3Alt, FaAngular, FaReact } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';

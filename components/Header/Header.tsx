@@ -2,7 +2,7 @@ import styles from './Header.module.scss';
 import Head from 'next/head';
 import { SiCoderwall } from 'react-icons/si';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
-import { CgMenuHotdog } from 'react-icons/cg';
+import { BiMenuAltRight } from 'react-icons/bi';
 import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { fall, fallItem } from '../../animations/animations';
@@ -103,7 +103,7 @@ const Header = ({
             className={styles.menu}
             onClick={() => mobile_setIsHeaderCollapsed()}
           >
-            <CgMenuHotdog />
+            <BiMenuAltRight />
           </button>
         )}
       </motion.div>

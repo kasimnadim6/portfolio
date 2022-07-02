@@ -1,6 +1,10 @@
 import styles from './Footer.module.scss';
 
-const Footer = () => {
+interface Props {
+  mobile_isHeaderCollapsed: boolean;
+}
+
+const Footer = ({ mobile_isHeaderCollapsed }: Props) => {
   const showProfileHandler = (
     e: React.MouseEvent<HTMLAnchorElement>,
     profile: string
@@ -29,6 +33,9 @@ const Footer = () => {
 
   return (
     <footer className={styles.footer}>
+      {!mobile_isHeaderCollapsed && (
+        <div className={styles['black-overlap-screen']}></div>
+      )}
       <div className={styles['footer__container']}>
         <span className={styles.logo}>Kasim</span>
         <ul className={`w-100 ${styles['connect-me']}`}>

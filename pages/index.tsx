@@ -23,11 +23,10 @@ const Home: NextPage = () => {
         mobile_isHeaderCollapsed={mobile_isHeaderCollapsed}
         mobile_setIsHeaderCollapsed={mobile_setIsHeaderCollapsedHandler}
       />
-      <div
-        className={`${styles.container} ${
-          !mobile_isHeaderCollapsed ? styles['back-drop-effect'] : ''
-        }`}
-      >
+      <div className={styles.container}>
+        {!mobile_isHeaderCollapsed && (
+          <div className={styles['black-overlap-screen']}></div>
+        )}
         <main className={styles.main}>
           <Banner />
           <About />
@@ -37,7 +36,7 @@ const Home: NextPage = () => {
           <Contact />
         </main>
       </div>
-      <Footer />
+      <Footer mobile_isHeaderCollapsed={mobile_isHeaderCollapsed} />
     </AnimatePresence>
   );
 };

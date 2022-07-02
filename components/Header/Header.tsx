@@ -69,7 +69,9 @@ const Header = () => {
       className={`${styles.header} ${
         scroll.curScroll > 50 ? styles.shadow : ''
       } ${hideHeader ? styles['hide-header'] : ''} ${
-        mobile_isHeaderCollapsed ? styles['mobile-header-collapsed'] : ''
+        mobile_isHeaderCollapsed
+          ? styles['mobile-header-collapsed']
+          : styles['mobile-header-opened']
       }`}
     >
       <Head>
@@ -81,9 +83,9 @@ const Header = () => {
         variants={fall}
         initial="initial"
         animate="animate"
-        className={styles['logo-box']}
+        className={styles['logo-box-container']}
       >
-        <motion.div variants={fallItem}>
+        <motion.div variants={fallItem} className={styles['logo-wrap']}>
           <SiCoderwall className={styles['icon-logo']} />
           <span className={styles.logo}>Kasim</span>
         </motion.div>

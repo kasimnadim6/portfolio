@@ -1,5 +1,10 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 .banner {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 6rem 15rem;
   min-height: calc(100vh - 7rem);
@@ -85,6 +90,28 @@
           line-height: 1.4;
           padding-top: 0.8rem;
           margin-bottom: 2.8rem;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .banner {
+    padding: 1.6rem;
+    .about {
+      .circle {
+        display: none;
+      }
+      .intro-container {
+        .name {
+          font-size: 5rem;
+        }
+        .tag--2 {
+          font-size: 4rem;
+        }
+        .tag--3 {
+          width: 100%;
         }
       }
     }

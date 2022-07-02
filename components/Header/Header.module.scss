@@ -13,10 +13,15 @@
   display: flex;
   align-items: center;
   //   justify-content: space-between;
-  .logo-box {
+  .logo-box-container {
     display: flex;
     align-items: center;
     gap: 1rem;
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
     .logo {
       font-size: 4rem;
       font-family: 'Water Brush', cursive;
@@ -58,6 +63,8 @@
     ul {
       display: flex;
       li {
+        display: flex;
+        align-items: center;
         list-style: none;
         cursor: pointer;
         font-size: 2rem;
@@ -93,7 +100,7 @@
   .close {
     display: none;
     position: absolute;
-    bottom: 2rem;
+    bottom: 1.4rem;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -102,6 +109,9 @@
       height: 3.5rem;
       color: var(--primary-color);
       filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.4));
+      &:hover {
+        color: var(--tertiary-color);
+      }
     }
   }
   .social-icons ul {
@@ -140,49 +150,63 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .header {
-    flex-direction: column;
-    max-height: 100%;
-    height: 100%;
-    padding: 2rem 0;
-    .logo-box {
+  // will be added on header collapsed
+  .mobile-header-collapsed {
+    max-height: 7rem;
+    padding-top: 1rem;
+    .logo-box-container {
+      width: 100%;
+      justify-content: space-around;
       .menu {
         display: block;
       }
     }
     .nav-links {
+      display: none;
+    }
+  }
+
+  // will be added on header opened
+  .mobile-header-opened {
+    flex-direction: column;
+    padding: 1.8rem 0 0 0;
+    height: 75%;
+    max-height: 75%;
+    border-bottom-right-radius: 15rem;
+    border-bottom-left-radius: 15rem;
+    background-color: rgba($color: #000048, $alpha: 1);
+    .logo-box-container {
+      .icon-logo {
+        color: var(--white);
+      }
+    }
+    .nav-links {
       width: 100%;
-      margin-top: 3rem;
       ul {
         width: 100%;
+        height: 90%;
         align-items: center;
+        flex-direction: column;
         li {
-          @include media-breakpoint-down(sm) {
-            flex: 1;
-            padding: 0;
-            &:not(:last-child) {
-              margin-right: 0;
-            }
+          flex: 1;
+          padding: 0;
+          &:not(:last-child) {
+            margin-right: 0;
           }
-        }
-        @include media-breakpoint-down(sm) {
-          flex-direction: column;
+          a {
+            color: var(--white);
+          }
+          &:hover a {
+            color: var(--tertiary-color);
+          }
         }
       }
     }
     .close {
       display: block;
-    }
-  }
-  .mobile-header-collapsed {
-    max-height: 7rem;
-    padding-top: 1rem;
-    .logo-box {
-      width: 100%;
-      justify-content: space-around;
-    }
-    .nav-links {
-      display: none;
+      svg {
+        color: var(--white);
+      }
     }
   }
 }

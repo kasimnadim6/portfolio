@@ -28,7 +28,7 @@ const About = () => {
   return (
     <section id="about" className={styles.about}>
       <h2 className={styles.heading}>About Me</h2>
-      <div className={styles.container}>
+      <div className={`flex-column flex-md-row ${styles.container}`}>
         <div className={styles['about-me']}>
           <p>
             Hey! My name is Mahammad Kasim Nadim and I enjoy creating things

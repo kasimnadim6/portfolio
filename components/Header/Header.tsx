@@ -3,9 +3,9 @@ import Head from 'next/head';
 import { SiCoderwall } from 'react-icons/si';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { CgMenuHotdog } from 'react-icons/cg';
-import { BaseSyntheticEvent, useEffect, useRef, useState } from 'react';
+import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { fall, fallItem, linkVariants } from '../../animations/animations';
+import { fall, fallItem } from '../../animations/animations';
 
 const Header = () => {
   const [mobile_isHeaderCollapsed, mobile_setIsHeaderCollapsed] =
@@ -83,9 +83,12 @@ const Header = () => {
         variants={fall}
         initial="initial"
         animate="animate"
-        className={styles['logo-box-container']}
+        className={`${styles['logo-box-container']}`}
       >
-        <motion.div variants={fallItem} className={styles['logo-wrap']}>
+        <motion.div
+          variants={fallItem}
+          className="d-flex align-items-center gap-3"
+        >
           <SiCoderwall className={styles['icon-logo']} />
           <span className={styles.logo}>Kasim</span>
         </motion.div>
@@ -99,7 +102,7 @@ const Header = () => {
         )}
       </motion.div>
 
-      <nav className={styles['nav-links']}>
+      <nav className={`${styles['nav-links']}`}>
         <motion.ul
           variants={fall}
           initial="initial"

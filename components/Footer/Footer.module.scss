@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 .footer {
   // height: 20rem;
   background-color: var(--black-shade-1);
@@ -53,5 +57,11 @@
       font-size: 1.6rem;
       font-weight: lighter;
     }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .footer {
+    padding: 1.6rem;
   }
 }

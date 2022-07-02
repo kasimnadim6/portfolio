@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 .works {
   padding: 2rem 15rem;
   display: flex;
@@ -37,6 +41,7 @@
       perspective: 1000px;
       z-index: 10;
       transition: all 0.5s;
+      cursor: pointer;
       &:nth-child(odd) {
         left: 5rem;
         &::before {
@@ -157,6 +162,37 @@
       }
       li {
         list-style: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .works {
+    padding: 1.6rem;
+    .container {
+      .project {
+        padding: 2rem;
+        &:nth-child(odd) {
+          left: -2.7rem;
+        }
+        &:nth-child(even) {
+          right: -1rem;
+        }
+        &__info {
+          width: 100%;
+          padding: 1.5rem;
+          .technology-used {
+          }
+        }
+        ul {
+          padding-left: 0.6rem;
+        }
+        &:hover {
+          .project__info {
+            transform: translateZ(3rem) translateX(1.5rem);
+          }
+        }
       }
     }
   }

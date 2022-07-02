@@ -31,7 +31,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles['footer__container']}>
         <span className={styles.logo}>Kasim</span>
-        <ul className={styles['connect-me']}>
+        <ul className={`flex-column w-100 ${styles['connect-me']}`}>
           <li>
             <a href="#" onClick={(e) => showProfileHandler(e, 'linkedin')}>
               LinkedIn

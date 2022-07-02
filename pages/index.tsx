@@ -8,6 +8,7 @@ import About from '../components/About/About';
 import LatestWorks from '../components/LatestWorks/LatestWorks';
 import Contact from '../components/Contact/Contact';
 import Experience from '../components/Experience/Experience';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const Home: NextPage = () => {
   return (

@@ -1,3 +1,7 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 .about {
   padding: 2rem 15rem;
   display: flex;
@@ -168,4 +172,10 @@
 }
 .icon {
   margin-right: 5px;
+}
+
+@include media-breakpoint-down(sm) {
+  .about {
+    padding: 1.6rem;
+  }
 }

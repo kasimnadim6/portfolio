@@ -1,11 +1,15 @@
 import styles from './Header.module.scss';
 import Head from 'next/head';
 import { SiCoderwall } from 'react-icons/si';
+import { AiOutlineCloseCircle } from 'react-icons/ai';
+import { CgMenuHotdog } from 'react-icons/cg';
 import { BaseSyntheticEvent, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { fall, fallItem, linkVariants } from '../../animations/animations';
 
 const Header = () => {
+  const [mobile_isHeaderCollapsed, mobile_setIsHeaderCollapsed] =
+    useState(true);
   const [scroll, setScroll] = useState({
     curScroll: 0,
     prevScroll: 0,
@@ -51,6 +55,7 @@ const Header = () => {
 
   const navigationHandler = (e: BaseSyntheticEvent) => {
     e.preventDefault();
+    mobile_setIsHeaderCollapsed((val) => !val);
     const target = e.target.textContent + '';
     document.getElementById(target?.toLocaleLowerCase())?.scrollIntoView({
       behavior: 'smooth',
@@ -63,7 +68,9 @@ const Header = () => {
     <header
       className={`${styles.header} ${
         scroll.curScroll > 50 ? styles.shadow : ''
-      } ${hideHeader ? styles['hide-header'] : ''}`}
+      } ${hideHeader ? styles['hide-header'] : ''} ${
+        mobile_isHeaderCollapsed ? styles['mobile-header-collapsed'] : ''
+      }`}
     >
       <Head>
         <title>Mahammad Kasim Nadim</title>
@@ -78,10 +85,16 @@ const Header = () => {
       >
         <motion.div variants={fallItem}>
           <SiCoderwall className={styles['icon-logo']} />
+          <span className={styles.logo}>Kasim</span>
         </motion.div>
-        <motion.div variants={fallItem} className={styles.logo}>
-          Kasim
-        </motion.div>
+        {mobile_isHeaderCollapsed && (
+          <button
+            className={styles.menu}
+            onClick={() => mobile_setIsHeaderCollapsed((val) => !val)}
+          >
+            <CgMenuHotdog />
+          </button>
+        )}
       </motion.div>
 
       <nav className={styles['nav-links']}>
@@ -108,6 +121,14 @@ const Header = () => {
           </motion.li>
         </motion.ul>
       </nav>
+      {!mobile_isHeaderCollapsed && (
+        <button
+          className={styles.close}
+          onClick={() => mobile_setIsHeaderCollapsed((val) => !val)}
+        >
+          <AiOutlineCloseCircle />
+        </button>
+      )}
       {/* <div className={styles['social-icons']}>
         <ul>
           <li>

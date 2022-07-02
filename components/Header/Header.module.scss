@@ -152,11 +152,10 @@
 @include media-breakpoint-down(sm) {
   // will be added on header collapsed
   .mobile-header-collapsed {
-    max-height: 7rem;
-    padding-top: 1rem;
+    padding: 1rem 2rem 0 2rem;
     .logo-box-container {
       width: 100%;
-      justify-content: space-around;
+      justify-content: space-between;
       .menu {
         display: block;
       }

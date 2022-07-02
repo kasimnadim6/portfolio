@@ -10,7 +10,6 @@
     var(--white-light-3)
   );
   position: relative;
-
   .main {
     margin-top: 7rem;
     .icon {
@@ -37,4 +36,7 @@
       flex-grow: 1;
     }
   }
+}
+.back-drop-effect {
+  opacity: 0.1;
 }

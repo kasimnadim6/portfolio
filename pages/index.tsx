@@ -9,12 +9,25 @@ import LatestWorks from '../components/LatestWorks/LatestWorks';
 import Contact from '../components/Contact/Contact';
 import Experience from '../components/Experience/Experience';
 import 'bootstrap/dist/css/bootstrap.css';
+import { useState } from 'react';
 
 const Home: NextPage = () => {
+  const [mobile_isHeaderCollapsed, mobile_setIsHeaderCollapsed] =
+    useState(true);
+  const mobile_setIsHeaderCollapsedHandler = () => {
+    mobile_setIsHeaderCollapsed((val) => !val);
+  };
   return (
     <AnimatePresence>
-      <Header />
-      <div className={styles.container}>
+      <Header
+        mobile_isHeaderCollapsed={mobile_isHeaderCollapsed}
+        mobile_setIsHeaderCollapsed={mobile_setIsHeaderCollapsedHandler}
+      />
+      <div
+        className={`${styles.container} ${
+          !mobile_isHeaderCollapsed ? styles['back-drop-effect'] : ''
+        }`}
+      >
         <main className={styles.main}>
           <Banner />
           <About />

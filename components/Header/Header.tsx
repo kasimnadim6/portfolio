@@ -7,9 +7,15 @@ import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { fall, fallItem } from '../../animations/animations';
 
-const Header = () => {
-  const [mobile_isHeaderCollapsed, mobile_setIsHeaderCollapsed] =
-    useState(true);
+interface Props {
+  mobile_isHeaderCollapsed: boolean;
+  mobile_setIsHeaderCollapsed: () => any;
+}
+
+const Header = ({
+  mobile_isHeaderCollapsed,
+  mobile_setIsHeaderCollapsed,
+}: Props) => {
   const [scroll, setScroll] = useState({
     curScroll: 0,
     prevScroll: 0,
@@ -55,7 +61,7 @@ const Header = () => {
 
   const navigationHandler = (e: BaseSyntheticEvent) => {
     e.preventDefault();
-    mobile_setIsHeaderCollapsed((val) => !val);
+    mobile_setIsHeaderCollapsed();
     const target = e.target.textContent + '';
     document.getElementById(target?.toLocaleLowerCase())?.scrollIntoView({
       behavior: 'smooth',
@@ -95,7 +101,7 @@ const Header = () => {
         {mobile_isHeaderCollapsed && (
           <button
             className={styles.menu}
-            onClick={() => mobile_setIsHeaderCollapsed((val) => !val)}
+            onClick={() => mobile_setIsHeaderCollapsed()}
           >
             <CgMenuHotdog />
           </button>
@@ -129,7 +135,7 @@ const Header = () => {
       {!mobile_isHeaderCollapsed && (
         <button
           className={styles.close}
-          onClick={() => mobile_setIsHeaderCollapsed((val) => !val)}
+          onClick={() => mobile_setIsHeaderCollapsed()}
         >
           <AiOutlineCloseCircle />
         </button>

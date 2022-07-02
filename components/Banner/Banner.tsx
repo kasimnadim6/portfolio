@@ -3,17 +3,31 @@ import { motion } from 'framer-motion';
 import { appear, rightToLeftFlow } from '../../animations/animations';
 import { FaCode } from 'react-icons/fa';
 import Button from '../Shared/Button';
+import { useEffect } from 'react';
 
 const Banner = () => {
   const whatsAppMe = () => {
     window.open('https://wa.me/+918861321329', '_blank');
   };
+  useEffect(() => {
+    let text = document.getElementById('role');
+    if (text != undefined) {
+      text.innerHTML = text.innerText
+        .split('')
+        .map(
+          (char, i) =>
+            `<span style="transform:rotate(${(i + 1) * 18}deg)">${char}</span>`
+        )
+        .join('');
+    }
+  });
   return (
     <motion.div
+      id="banner"
       variants={appear}
       initial="initial"
       animate="animate"
-      className={styles['banner']}
+      className={styles.banner}
     >
       <div className={styles['about']}>
         <div className={styles.circle}>

@@ -9,16 +9,6 @@ import { SiTypescript, SiNextdotjs } from 'react-icons/si';
 const About = () => {
   const [mouseEnter, setMouseEnter] = useState(false);
   useEffect(() => {
-    let text = document.getElementById('role');
-    if (text != undefined) {
-      text.innerHTML = text.innerText
-        .split('')
-        .map(
-          (char, i) =>
-            `<span style="transform:rotate(${(i + 1) * 9.5}deg)">${char}</span>`
-        )
-        .join('');
-    }
     // hover animation on profile
     const container = document.getElementById('profile');
     const card = document.getElementById('profile__pic');

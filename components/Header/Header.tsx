@@ -1,7 +1,7 @@
 import styles from './Header.module.scss';
 import Head from 'next/head';
 import { SiCoderwall } from 'react-icons/si';
-import { BaseSyntheticEvent, useEffect, useState } from 'react';
+import { BaseSyntheticEvent, useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { fall, fallItem, linkVariants } from '../../animations/animations';
 
@@ -85,40 +85,25 @@ const Header = () => {
       </motion.div>
 
       <nav className={styles['nav-links']}>
-        <motion.ul variants={fall} initial="initial" animate="animate">
-          <motion.li
-            variants={fallItem}
-            whileHover={linkVariants}
-            onClick={navigationHandler}
-          >
+        <motion.ul
+          variants={fall}
+          initial="initial"
+          // whileHover="hover"
+          animate="animate"
+        >
+          <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">About</a>
           </motion.li>
-          <motion.li
-            variants={fallItem}
-            whileHover={linkVariants}
-            onClick={navigationHandler}
-          >
+          <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">Experience</a>
           </motion.li>
-          <motion.li
-            variants={fallItem}
-            whileHover={linkVariants}
-            onClick={navigationHandler}
-          >
+          <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">Work</a>
           </motion.li>
-          <motion.li
-            variants={fallItem}
-            whileHover={linkVariants}
-            onClick={navigationHandler}
-          >
+          <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">Experiments</a>
           </motion.li>
-          <motion.li
-            variants={fallItem}
-            whileHover={linkVariants}
-            onClick={navigationHandler}
-          >
+          <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">Contact</a>
           </motion.li>
         </motion.ul>

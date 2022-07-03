@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4rem 8rem;
+  padding: 4rem 6rem;
   min-height: calc(100vh - 7rem);
   .about {
     font-weight: bold;
@@ -98,7 +98,7 @@
 
 @include media-breakpoint-down(sm) {
   .banner {
-    padding: 1.6rem;
+    padding: 1.8rem;
     .about {
       .circle {
         display: none;

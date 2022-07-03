@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         <main className={styles.main}>
           <Banner />
           <About />
-          <Experience />
+          {/* <Experience /> */}
           <LatestWorks />
           {/* <FunProjects /> */}
           <Contact />

@@ -118,15 +118,15 @@ const Header = ({
           <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">About</a>
           </motion.li>
-          <motion.li variants={fallItem} onClick={navigationHandler}>
+          {/* <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">Experience</a>
-          </motion.li>
+          </motion.li> */}
           <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">Work</a>
           </motion.li>
-          <motion.li variants={fallItem} onClick={navigationHandler}>
+          {/* <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">Experiments</a>
-          </motion.li>
+          </motion.li> */}
           <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">Contact</a>
           </motion.li>

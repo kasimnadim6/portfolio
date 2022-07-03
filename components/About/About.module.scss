@@ -3,7 +3,7 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 
 .about {
-  padding: 2rem 8rem;
+  padding: 2rem 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -176,6 +176,6 @@
 
 @include media-breakpoint-down(sm) {
   .about {
-    padding: 1.6rem;
+    padding: 1.8rem;
   }
 }

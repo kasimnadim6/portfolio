@@ -5,30 +5,33 @@ import { useEffect, useState } from 'react';
 import { FaHtml5, FaCss3Alt, FaAngular, FaReact } from 'react-icons/fa';
 import { IoLogoJavascript } from 'react-icons/io';
 import { SiTypescript, SiNextdotjs } from 'react-icons/si';
+import { isDesktop } from 'react-device-detect';
 
 const About = () => {
   const [mouseEnter, setMouseEnter] = useState(false);
   useEffect(() => {
     // hover animation on profile
-    const container = document.getElementById('profile');
-    const card = document.getElementById('profile__pic');
-    container?.addEventListener('mousemove', (e) => {
-      const w =
-        container.getBoundingClientRect().left + container.offsetWidth / 2;
-      const h =
-        container.getBoundingClientRect().top + container.offsetHeight / 2;
-      const xAxis = (w - e.pageX) / 10;
-      const yAxis = (w - e.pageY) / 10;
-      card!.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-    });
-    container?.addEventListener('mouseenter', () => setMouseEnter(true));
-    container?.addEventListener('mouseleave', () => setMouseEnter(false));
+    if (isDesktop) {
+      const container = document.getElementById('profile');
+      const card = document.getElementById('profile__pic');
+      container?.addEventListener('mousemove', (e) => {
+        const w =
+          container.getBoundingClientRect().left + container.offsetWidth / 2;
+        const h =
+          container.getBoundingClientRect().top + container.offsetHeight / 2;
+        const xAxis = (w - e.pageX) / 10;
+        const yAxis = (w - e.pageY) / 10;
+        card!.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+      });
+      container?.addEventListener('mouseenter', () => setMouseEnter(true));
+      container?.addEventListener('mouseleave', () => setMouseEnter(false));
+    }
   }, []);
 
   return (
     <section id="about" className={styles.about}>
       <h2 className={styles.heading}>About Me</h2>
-      <div className={`flex-column flex-md-row ${styles.container}`}>
+      <div className={`flex-column flex-lg-row ${styles.container}`}>
         <div className={styles['about-me']}>
           <p>
             Hey! My name is Mahammad Kasim Nadim and I enjoy creating things

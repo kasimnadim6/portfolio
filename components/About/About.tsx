@@ -10,21 +10,40 @@ import { isDesktop } from 'react-device-detect';
 const About = () => {
   const [mouseEnter, setMouseEnter] = useState(false);
   useEffect(() => {
-    // hover animation on profile
+    const card = document.getElementById('card');
+    /* Get the height and width of the element */
+    const height = card?.clientHeight || 0;
+    const width = card?.clientWidth || 0;
+
+    function handleMouseMove(e: any) {
+      /* Store the x and y position */
+      const xVal = e.layerX;
+      const yVal = e.layerY;
+      /*
+       * Calculate rotation value along the Y-axis
+       * Here the multiplier 20 is to Control the rotation
+       */
+      const yRotation = 20 * ((xVal - width / 2) / width);
+      /* Calculate the rotation along the X-axis */
+      const xRotation = -20 * ((yVal - height / 2) / height);
+      /* Generate string for CSS transform property */
+      const transformCSS =
+        'perspective(500px) rotateX(' +
+        xRotation +
+        'deg) rotateY(' +
+        yRotation +
+        'deg)';
+
+      /* Apply the calculated transformation */
+      card!.style.transform = transformCSS;
+    }
     if (isDesktop) {
-      const container = document.getElementById('profile');
-      const card = document.getElementById('profile__pic');
-      container?.addEventListener('mousemove', (e) => {
-        const w =
-          container.getBoundingClientRect().left + container.offsetWidth / 2;
-        const h =
-          container.getBoundingClientRect().top + container.offsetHeight / 2;
-        const xAxis = (w - e.pageX) / 10;
-        const yAxis = (w - e.pageY) / 10;
-        card!.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+      card?.addEventListener('mousemove', handleMouseMove);
+      card?.addEventListener('mouseout', function () {
+        card!.style.transform = 'perspective(500px) rotateX(0) rotateY(0)';
       });
-      container?.addEventListener('mouseenter', () => setMouseEnter(true));
-      container?.addEventListener('mouseleave', () => setMouseEnter(false));
+      card?.addEventListener('mouseenter', () => setMouseEnter(true));
+      card?.addEventListener('mouseleave', () => setMouseEnter(false));
     }
   }, []);
 
@@ -107,17 +126,16 @@ const About = () => {
             </ul>
           </div>
         </div>
-        {/* <div className={styles['tech-stacks']}>Tech stack</div> */}
-        <div className={styles['profile']} id="profile">
-          <motion.div
-            variants={appear}
-            initial="initial"
-            animate="animate"
-            className={`${styles['profile__pic']} ${
-              mouseEnter ? styles['mouse-enter'] : styles['mouse-leave']
-            }`}
-            id="profile__pic"
-          >
+        <motion.div
+          variants={appear}
+          initial="initial"
+          animate="animate"
+          id="card"
+          className={`${styles.card} ${
+            mouseEnter ? styles['mouse-enter'] : styles['mouse-leave']
+          }`}
+        >
+          <div id="photo" className={styles.photo}>
             <motion.div variants={appear} className={styles.name}>
               <span>Mahammad Kasim</span>
             </motion.div>
@@ -125,8 +143,8 @@ const About = () => {
               <span className={styles['experience-year']}>4</span>
               <span>Years Of Experience</span>
             </motion.div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

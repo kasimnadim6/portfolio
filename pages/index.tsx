@@ -10,6 +10,7 @@ import Contact from '../components/Contact/Contact';
 import Experience from '../components/Experience/Experience';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
+import FunProjects from '../components/FunProjects/FunProjects';
 
 const Home: NextPage = () => {
   const [mobile_isHeaderCollapsed, mobile_setIsHeaderCollapsed] =
@@ -32,7 +33,7 @@ const Home: NextPage = () => {
           <About />
           {/* <Experience /> */}
           <LatestWorks />
-          {/* <FunProjects /> */}
+          <FunProjects />
           <Contact />
         </main>
       </div>

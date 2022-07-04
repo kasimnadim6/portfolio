@@ -1,6 +1,6 @@
 import styles from './Banner.module.scss';
 import { motion } from 'framer-motion';
-import { appear, rightToLeftFlow } from '../../animations/animations';
+import { appear } from '../../animations/animations';
 import { FaCode } from 'react-icons/fa';
 import Button from '../Shared/Button';
 import { useEffect } from 'react';
@@ -40,15 +40,7 @@ const Banner = () => {
           <span className={styles['tag--1']}>Hi, My name is</span>
           <h1 className={styles.name}>Mahammad Kasim Nadim.</h1>
           <h2 className={`${styles['tag--2']} text-background-clip`}>
-            I build things for the{' '}
-            <motion.span
-              variants={rightToLeftFlow}
-              initial="initial"
-              animate="animate"
-              className={styles.web}
-            >
-              Web.
-            </motion.span>
+            I build things for the <span className={styles.web}>Web.</span>
           </h2>
           <div className={`${styles['tag--3']}`}>
             I’m a Front-End Web developer based in Mangalore specializing in

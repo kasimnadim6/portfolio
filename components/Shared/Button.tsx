@@ -10,14 +10,9 @@ interface Props {
 }
 const Button = ({ children, onClick }: Props) => {
   return (
-    <button className={styles.btn}>
+    <button className={styles.btn} onClick={onClick}>
       {children}
-      <motion.span
-        variants={arrowMovement}
-        initial="initial"
-        animate="animate"
-        onClick={onClick}
-      >
+      <motion.span variants={arrowMovement} initial="initial" animate="animate">
         <MdOutlineDoubleArrow size={18} />
       </motion.span>
     </button>

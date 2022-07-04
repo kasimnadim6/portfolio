@@ -43,7 +43,7 @@
       transition: all 0.5s;
       cursor: pointer;
       &:nth-child(odd) {
-        left: 5rem;
+        left: 2rem;
         &::before {
           content: attr(data-index);
           display: none;
@@ -58,7 +58,7 @@
         }
       }
       &:nth-child(even) {
-        right: 5rem;
+        right: 4rem;
         &::before {
           content: attr(data-index);
           display: none;

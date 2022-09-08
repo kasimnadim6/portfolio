@@ -10,41 +10,6 @@
   min-height: calc(100vh - 7rem);
   .about {
     font-weight: bold;
-    .circle {
-      width: 10rem;
-      height: 10rem;
-      border-radius: 10rem;
-      margin-bottom: 3rem;
-      position: relative;
-      .icon-code {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 2rem;
-      }
-    }
-    .role {
-      font-size: 1.2rem;
-      position: absolute;
-      top: 5%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      text-transform: uppercase;
-      color: var(--primary-color);
-      span {
-        position: absolute;
-        transform-origin: 0 5rem;
-      }
-      &::before {
-        content: '\A';
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #4ca456;
-        display: inline-block;
-      }
-    }
     .intro-container {
       color: var(--primary-color);
       display: flex;

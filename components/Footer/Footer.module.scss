@@ -3,8 +3,7 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 
 .footer {
-  // height: 20rem;
-  background-color: var(--black-shade-1);
+  background-color: var(--bg-color);
   padding: 3rem;
   position: relative;
   &__container {

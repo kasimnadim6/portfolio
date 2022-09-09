@@ -1,0 +1,76 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
+
+.technologies {
+  background-color: var(--black-shade-1);
+  width: 100%;
+  //   min-height: 30vh;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  .heading {
+    position: absolute;
+    top: -2rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: var(--bg-color);
+    padding: 0.8rem 6rem;
+    border-radius: 10rem;
+    box-shadow: inset 0 0 0 1px #272e35, 0 8px 24px -8px #646f7c;
+    h2 {
+      margin: 0;
+      font-size: 2rem;
+      color: var(--white-shade-1);
+    }
+  }
+  .tech-icons {
+    padding: 6rem 4rem 4rem 4rem;
+    display: flex;
+    justify-content: center;
+    gap: 9rem;
+    .container {
+      display: flex;
+      flex-direction: column;
+      .icon {
+        padding: 1rem;
+        width: 7rem;
+        height: 7rem;
+        filter: drop-shadow(0 0 3rem #646f7c);
+      }
+      .html {
+        filter: drop-shadow(0 0 3rem #e44d27);
+      }
+      .css {
+        filter: drop-shadow(0 0 3rem #1f62af);
+      }
+      .javascript {
+        filter: drop-shadow(0 0 3rem #f7df1c);
+      }
+      .typescript {
+        filter: drop-shadow(0 0 3rem #007acc);
+      }
+      .angular {
+        filter: drop-shadow(0 0 3rem #dd0031);
+      }
+      .react {
+        filter: drop-shadow(0 0 3rem #00d8ff);
+      }
+      .next {
+        filter: drop-shadow(0 0 1rem #fff);
+      }
+      .node {
+        filter: drop-shadow(0 0 3rem #679f63);
+      }
+      .caption {
+        font-size: medium;
+        margin-top: 1rem;
+        font-weight: 100;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

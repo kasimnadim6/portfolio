@@ -11,6 +11,7 @@ import Experience from '../components/Experience/Experience';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
 import FunProjects from '../components/FunProjects/FunProjects';
+import Technologies from '../components/Technologies/Technologies';
 
 const Home: NextPage = () => {
   const [mobile_isHeaderCollapsed, mobile_setIsHeaderCollapsed] =
@@ -30,6 +31,7 @@ const Home: NextPage = () => {
         )}
         <main className={styles.main}>
           <Banner />
+          <Technologies />
           <About />
           {/* <Experience /> */}
           <LatestWorks />

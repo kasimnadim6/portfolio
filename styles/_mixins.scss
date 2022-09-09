@@ -7,19 +7,12 @@
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s;
-  background-image: linear-gradient(
-    to right bottom,
-    var(--primary-color),
-    var(--secondary-color)
-  );
-  color: var(--white-light-1);
-  box-shadow: 0 4px 15px 0 var(--primary-color);
+  background: linear-gradient(to right, #034ab8 50%, #0052cc 50%);
+  color: var(--white);
+  box-shadow: 0 1rem 3rem 0 var(--btn-color-light);
+  background-position: right bottom;
+  background-size: 200% 100%;
   &:hover {
-    transform: translateY(-0.3rem);
-    box-shadow: 0 0 0 0 var(--primary-color);
-  }
-  &:active,
-  &:focus {
-    transform: translateY(-0.1rem);
+    background-position: left bottom;
   }
 }

@@ -16,19 +16,19 @@ const Banner = () => {
       className={styles.banner}
     >
       <div className={styles['about']}>
-        <div className={styles['intro-container']}>
-          <span className={styles['tag--1']}>Hi, My name is</span>
-          <h1 className={styles.name}>Mahammad Kasim Nadim.</h1>
-          <h2 className={`${styles['tag--2']} text-background-clip`}>
-            I build things for the <span className={styles.web}>Web.</span>
-          </h2>
-          <div className={`${styles['tag--3']}`}>
-            I’m a Front-End Web developer based in Mangalore specializing in
-            building (and occasionally designing) exceptional digital
-            experiences and I Love to Code.
-          </div>
-          <Button onClick={whatsAppMe}>Text Me</Button>
+        <span className={styles['tag--1']}>Hi, My name is</span>
+        <h1 className={styles.name}>Mahammad Kasim Nadim.</h1>
+        <h2 className={`${styles['tag--2']} text-background-clip`}>
+          I build things for the <span className={styles.web}>{`{Web}`}</span>
+        </h2>
+        <div className={`${styles['tag--3']}`}>
+          I’m a Front-End Web developer based in Mangalore specializing in
+          building (and occasionally designing) exceptional digital experiences
+          and I Love to Code.
         </div>
+        <Button onClick={whatsAppMe} className="btn--text-me">
+          Text Me
+        </Button>
       </div>
     </motion.div>
   );

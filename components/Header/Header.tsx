@@ -1,6 +1,6 @@
 import styles from './Header.module.scss';
 import Head from 'next/head';
-import { SiCoderwall } from 'react-icons/si';
+import { SiPaloaltosoftware } from 'react-icons/si';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { BaseSyntheticEvent, useEffect, useState } from 'react';
@@ -65,8 +65,6 @@ const Header = ({
     const target = e.target.textContent + '';
     document.getElementById(target?.toLocaleLowerCase())?.scrollIntoView({
       behavior: 'smooth',
-      // block: 'center',
-      // inline: 'center',
     });
   };
 
@@ -93,10 +91,10 @@ const Header = ({
       >
         <motion.div
           variants={fallItem}
-          className="d-flex align-items-center gap-3"
+          className="d-flex align-items-center gap-2"
         >
-          <SiCoderwall className={styles['icon-logo']} />
-          <span className={styles.logo}>Kasim</span>
+          <SiPaloaltosoftware className={styles['icon-logo']} />
+          <span className={styles.logo}>Kasim Nadim</span>
         </motion.div>
         {mobile_isHeaderCollapsed && (
           <button

@@ -8,38 +8,28 @@
   width: 100%;
   z-index: 1000;
   transition: transform 0.4s;
-  background-color: var(--white-light-1);
-  max-height: 7.5rem;
-  padding: 1rem 4rem;
+  background-color: var(--bg-color);
+  min-height: 7rem;
+  max-height: 7rem;
   display: flex;
   align-items: center;
-  //   justify-content: space-between;
+  justify-content: space-around;
   .logo-box-container {
     display: flex;
     align-items: center;
     gap: 1rem;
-    .logo {
-      font-size: 4rem;
-      font-family: 'Water Brush', cursive;
-      color: var(--primary-color);
-      background: linear-gradient(
-        150deg,
-        #000048,
-        #041962,
-        #093d7a,
-        #11698f,
-        #1b99a3,
-        #26b59e,
-        #34c48c,
-        #50c67d
-      );
-      background-clip: text;
-      color: transparent;
-    }
     .icon-logo {
-      font-size: 3rem;
-      opacity: 0.7;
-      margin-right: 1rem;
+      color: var(--white-shade-1);
+      font-size: 2rem;
+      // filter: drop-shadow(0 0 3rem #3dd875);
+      // box-shadow: inset 0 0 0 0px #272e35, 0 8px 24px -8px #3dd875;
+    }
+    .logo {
+      font-size: 1.6rem;
+      font-weight: 100;
+      color: var(--white);
+      text-transform: uppercase;
+      font-family: 'Lato', sans-serif;
     }
     .menu {
       display: none;
@@ -54,7 +44,6 @@
     }
   }
   .nav-links {
-    flex: 1;
     display: flex;
     justify-content: center;
     ul {
@@ -74,7 +63,7 @@
         }
         &:hover {
           a {
-            color: var(--primary-color);
+            color: var(--white);
             position: relative;
             &::after {
               display: block;
@@ -90,7 +79,7 @@
         }
         a {
           text-decoration: none;
-          color: var(--dark-dim);
+          color: var(--white-shade-2);
           font-weight: bold;
         }
       }
@@ -126,7 +115,6 @@
       padding: 1rem;
       a {
         .icon {
-          //   font-size: 2rem;
           &-linkedIn {
             color: #0e76a8;
           }
@@ -157,7 +145,6 @@
 @include media-breakpoint-down(sm) {
   // will be added on header collapsed
   .mobile-header-collapsed {
-    // padding: 1rem 2rem 0 2rem;
     .logo-box-container {
       width: 100%;
       justify-content: space-between;
@@ -173,7 +160,6 @@
   // will be added on header opened
   .mobile-header-opened {
     flex-direction: column;
-    // padding: 1.8rem 0 0 0;
     height: 80%;
     max-height: 80%;
     border-bottom-right-radius: 4rem;

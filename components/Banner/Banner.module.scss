@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 5rem 0;
+    margin: 8rem 0 10rem 0;
     .name {
       font-size: 5.6rem;
       text-transform: uppercase;
@@ -21,6 +21,8 @@
       color: transparent;
       -webkit-background-clip: text;
       font-weight: 900;
+      margin: 0;
+      text-align: center;
     }
     .tag {
       font-family: inherit;
@@ -37,6 +39,7 @@
         text-transform: uppercase;
         position: relative;
         color: var(--white-shade-2);
+        text-align: center;
         .web {
           background: linear-gradient(
             to right bottom,
@@ -64,19 +67,14 @@
   .banner {
     padding: 1.8rem;
     .about {
-      .circle {
-        display: none;
+      .name {
+        font-size: 5rem;
       }
-      .intro-container {
-        .name {
-          // font-size: 5rem;
-        }
-        .tag--2 {
-          // font-size: 4rem;
-        }
-        .tag--3 {
-          width: 100%;
-        }
+      .tag--2 {
+        font-size: 3.2rem;
+      }
+      .tag--3 {
+        width: 100%;
       }
     }
   }

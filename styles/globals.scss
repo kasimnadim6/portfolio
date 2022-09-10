@@ -27,4 +27,17 @@ body {
   @include media-breakpoint-up(xl) {
     // font-size: 80%;
   }
+  ::-webkit-scrollbar {
+    height: 3px;
+  }
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue-color-light) var(--blue-color-dark);
+  ::-webkit-scrollbar-track {
+    background: var(--black-shade-1);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color-light);
+    border-radius: 1rem;
+    border: 1px solid var(--blue-color-dark);
+  }
 }

@@ -94,7 +94,7 @@ const Header = ({
           className="d-flex align-items-center gap-2"
         >
           <SiPaloaltosoftware className={styles['icon-logo']} />
-          <span className={styles.logo}>Kasim Nadim</span>
+          <span className={`${styles.logo}`}>Kasim Nadim</span>
         </motion.div>
         {mobile_isHeaderCollapsed && (
           <button
@@ -138,34 +138,6 @@ const Header = ({
           <AiOutlineCloseCircle />
         </button>
       )}
-      {/* <div className={styles['social-icons']}>
-        <ul>
-          <li>
-            <a href="#">
-              <BsLinkedin
-                className={`${styles.icon} ${styles['icon-linkedIn']}`}
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <BsWhatsapp
-                className={`${styles.icon} ${styles['icon-whatsApp']}`}
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <SiGmail className={`${styles.icon} ${styles['icon-gmail']}`} />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <BsGithub className={`${styles.icon} ${styles['icon-github']}`} />
-            </a>
-          </li>
-        </ul>
-      </div> */}
     </header>
   );
 };

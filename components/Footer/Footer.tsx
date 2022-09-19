@@ -37,7 +37,7 @@ const Footer = ({ mobile_isHeaderCollapsed }: Props) => {
         <div className={styles['black-overlap-screen']}></div>
       )}
       <div className={styles['footer__container']}>
-        <span className={styles.logo}>Kasim</span>
+        <span className={styles.logo}>Kasim Nadim</span>
         <ul className={`w-100 ${styles['connect-me']}`}>
           <li>
             <a href="#" onClick={(e) => showProfileHandler(e, 'linkedin')}>

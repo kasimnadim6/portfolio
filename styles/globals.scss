@@ -29,6 +29,7 @@ body {
   }
   ::-webkit-scrollbar {
     height: 3px;
+    width: 5px;
   }
   scrollbar-width: thin;
   scrollbar-color: var(--blue-color-light) var(--blue-color-dark);
@@ -37,7 +38,7 @@ body {
   }
   ::-webkit-scrollbar-thumb {
     background-color: var(--blue-color-light);
-    border-radius: 1rem;
+    border-radius: 5rem;
     border: 1px solid var(--blue-color-dark);
   }
 }

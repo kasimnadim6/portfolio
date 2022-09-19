@@ -26,7 +26,7 @@ const Banner = () => {
           building (and occasionally designing) exceptional digital experiences
           and I Love to Code.
         </div>
-        <Button onClick={whatsAppMe} className="btn--text-me">
+        <Button onClick={whatsAppMe} className="btn--connect-me">
           Text Me
         </Button>
       </div>

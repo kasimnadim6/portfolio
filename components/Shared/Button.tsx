@@ -5,14 +5,16 @@ import { arrowMovement } from '../../animations/animations';
 import { ReactNode } from 'react';
 
 interface Props {
-  className: string;
+  className?: string;
   children?: ReactNode;
   onClick?: () => any;
 }
 const Button = ({ children, onClick, className }: Props) => {
-  console.log(className);
   return (
-    <button className={`${styles.btn} ${styles[className]}`} onClick={onClick}>
+    <button
+      className={`${styles.btn} ${className ? styles[className] : ''}`}
+      onClick={onClick}
+    >
       {children}
       <motion.span variants={arrowMovement} initial="initial" animate="animate">
         <MdOutlineDoubleArrow size={16} />

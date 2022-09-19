@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   @include button-style;
-  &--text-me {
+  &--connect-me {
     margin-top: 2.6rem;
     color: var(--white-shade-2);
   }

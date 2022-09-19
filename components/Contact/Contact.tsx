@@ -13,7 +13,9 @@ const Contact = () => {
       <span
         className={styles['message']}
       >{`Dropping a line to say g’day, or you have a question or just want to say hi or see if we can build something amazing together? I’d love to hear from you!`}</span>
-      <Button onClick={whatsAppMe}>Contact Me</Button>
+      <Button onClick={whatsAppMe} className="btn--connect-me">
+        Contact Me
+      </Button>
     </section>
   );
 };

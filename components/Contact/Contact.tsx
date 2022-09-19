@@ -8,6 +8,13 @@ const Contact = () => {
   };
   return (
     <section id="contact" className={styles.contact}>
+      <div className={styles['bg-shape-wrap']}>
+        <div className={styles['circle-shape__4']}></div>
+        <div className={styles['circle-shape__3']}></div>
+        <div className={styles['circle-shape__2']}></div>
+        <div className={styles['circle-shape__1']}></div>
+        <div className={styles['circle-shape__0']}></div>
+      </div>
       <span className={styles['sub-heading']}>{`What's next ?`}</span>
       <span className={styles['heading']}>Get In Touch</span>
       <span

@@ -82,8 +82,6 @@
     height: 5rem;
     border-radius: 10rem;
     background-color: var(--blue-color-dark);
-    filter: drop-shadow(0 0 1.5rem #0052cc);
-
     svg {
       width: 3.5rem;
       height: 3.5rem;
@@ -91,6 +89,7 @@
     }
     &:hover {
       background-color: var(--dark-dim);
+      filter: drop-shadow(0 0 1.5rem #3dd875);
       svg {
         color: var(--tertiary-color);
       }

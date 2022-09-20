@@ -34,18 +34,18 @@
           }
           .linkedin {
             color: var(--linkedin);
-            filter: drop-shadow(0 0 1.8rem #fff);
+            filter: drop-shadow(0 0 2rem #ccdae7);
           }
           .whatsapp {
             color: var(--whatsapp);
-            filter: drop-shadow(0 0 1.8rem #fff);
+            filter: drop-shadow(0 0 2rem #ccdae7);
           }
           .gmail {
             color: var(--gmail);
-            filter: drop-shadow(0 0 1.8rem #fff);
+            filter: drop-shadow(0 0 2rem #ccdae7);
           }
           .github {
-            filter: drop-shadow(0 0 1.8rem #fff);
+            filter: drop-shadow(0 0 2rem #ccdae7);
           }
         }
       }
@@ -61,5 +61,9 @@
 
 @include media-breakpoint-down(sm) {
   .footer {
+    &__container {
+      flex-direction: column;
+      gap: 2rem;
+    }
   }
 }

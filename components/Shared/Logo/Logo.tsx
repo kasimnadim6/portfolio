@@ -6,7 +6,6 @@ interface Props {
 }
 
 const Logo = ({ mobile_isHeaderCollapsed = true }: Props) => {
-  console.table(!mobile_isHeaderCollapsed);
   return (
     <div
       className={`${

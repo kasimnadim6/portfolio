@@ -42,22 +42,22 @@ const Footer = ({ mobile_isHeaderCollapsed }: Props) => {
         <ul className={styles['connect-me']}>
           <li>
             <a href="#" onClick={(e) => showProfileHandler(e, 'linkedin')}>
-              <SiLinkedin />
+              <SiLinkedin className={styles.linkedin} />
             </a>
           </li>
           <li>
             <a href="#" onClick={(e) => showProfileHandler(e, 'whatsapp')}>
-              <SiWhatsapp />
+              <SiWhatsapp className={styles.whatsapp} />
             </a>
           </li>
           <li>
             <a href="#" onClick={(e) => showProfileHandler(e, 'gmail')}>
-              <SiGmail />
+              <SiGmail className={styles.gmail} />
             </a>
           </li>
           <li>
             <a href="#" onClick={(e) => showProfileHandler(e, 'github')}>
-              <SiGithub />
+              <SiGithub className={styles.github} />
             </a>
           </li>
         </ul>

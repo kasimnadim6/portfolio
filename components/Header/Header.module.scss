@@ -82,7 +82,7 @@
     height: 5rem;
     border-radius: 10rem;
     background-color: var(--blue-color-dark);
-    filter: drop-shadow(0 0 2rem #034ab8);
+    filter: drop-shadow(0 0 1.5rem #0052cc);
 
     svg {
       width: 3.5rem;
@@ -150,12 +150,12 @@
   .mobile-header-opened {
     flex-direction: column;
     justify-content: flex-start;
-    min-height: 60%;
-    border-bottom-right-radius: 4rem;
-    border-bottom-left-radius: 4rem;
+    min-height: 70%;
+    border-bottom-right-radius: 10rem;
+    border-bottom-left-radius: 10rem;
     background-color: var(--black-shade-1);
     .logo-box-container {
-      margin-top: 5rem;
+      margin-top: 1rem;
       .icon-logo {
         font-size: 4rem;
         margin-right: 2rem;

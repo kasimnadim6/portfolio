@@ -1,6 +1,11 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
+
 .logo-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1.2rem;
   .icon-logo {
     font-size: 2.4rem;
@@ -17,5 +22,21 @@
     color: transparent;
     -webkit-background-clip: text;
     font-weight: 300;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .mobile-header-opened {
+    .logo-container {
+      flex-direction: column;
+      .icon-logo {
+        font-size: 6rem;
+        margin-bottom: 1.2rem;
+        color: var(--white-shade-1);
+      }
+      .logo {
+        font-size: 2.6rem;
+      }
+    }
   }
 }

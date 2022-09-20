@@ -1,9 +1,18 @@
 import styles from './Logo.module.scss';
 import { SiPaloaltosoftware } from 'react-icons/si';
 
-const Logo = () => {
+interface Props {
+  mobile_isHeaderCollapsed?: boolean;
+}
+
+const Logo = ({ mobile_isHeaderCollapsed = true }: Props) => {
+  console.table(!mobile_isHeaderCollapsed);
   return (
-    <>
+    <div
+      className={`${
+        !mobile_isHeaderCollapsed ? styles['mobile-header-opened'] : ''
+      }`}
+    >
       <div className={`${styles['logo-container']}`}>
         <svg width="0" height="0">
           <linearGradient
@@ -23,7 +32,7 @@ const Logo = () => {
         />
         <span className={`${styles.logo}`}>Kasim Nadim</span>
       </div>
-    </>
+    </div>
   );
 };
 

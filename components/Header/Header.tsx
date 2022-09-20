@@ -90,7 +90,7 @@ const Header = ({
         animate="animate"
         className={`${styles['logo-box-container']}`}
       >
-        <Logo />
+        <Logo mobile_isHeaderCollapsed={mobile_isHeaderCollapsed} />
         {mobile_isHeaderCollapsed && (
           <button
             className={styles.menu}

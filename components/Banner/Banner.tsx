@@ -1,7 +1,9 @@
+import Image from 'next/image';
 import styles from './Banner.module.scss';
 import { motion } from 'framer-motion';
 import { appear } from '../../animations/animations';
 import Button from '../Shared/Button/Button';
+import bg from '../../public/icons/bg-shape-001.png';
 
 const Banner = () => {
   const whatsAppMe = () => {
@@ -15,6 +17,9 @@ const Banner = () => {
       animate="animate"
       className={styles.banner}
     >
+      <div className="position-absolute">
+        <Image src={bg} alt="background" />
+      </div>
       <div className={styles['about']}>
         <span className={styles['tag--1']}>Hi, My name is</span>
         <h1 className={styles.name}>Mahammad Kasim Nadim.</h1>

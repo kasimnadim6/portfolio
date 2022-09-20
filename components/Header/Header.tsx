@@ -4,7 +4,7 @@ import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { fall, fallItem } from '../../animations/animations';
+import { appear, fall, fallItem } from '../../animations/animations';
 import Logo from '../Shared/Logo/Logo';
 import { isMobile } from 'react-device-detect';
 
@@ -103,24 +103,33 @@ const Header = ({
 
       <nav className={`${styles['nav-links']}`}>
         <motion.ul
-          variants={fall}
+          variants={!isMobile ? fall : appear}
           initial="initial"
           // whileHover="hover"
           animate="animate"
         >
-          <motion.li variants={fallItem} onClick={navigationHandler}>
+          <motion.li
+            variants={!isMobile ? fallItem : appear}
+            onClick={navigationHandler}
+          >
             <a href="#">About</a>
           </motion.li>
           {/* <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">Experience</a>
           </motion.li> */}
-          <motion.li variants={fallItem} onClick={navigationHandler}>
+          <motion.li
+            variants={!isMobile ? fallItem : appear}
+            onClick={navigationHandler}
+          >
             <a href="#">Work</a>
           </motion.li>
           {/* <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">Experiments</a>
           </motion.li> */}
-          <motion.li variants={fallItem} onClick={navigationHandler}>
+          <motion.li
+            variants={!isMobile ? fallItem : appear}
+            onClick={navigationHandler}
+          >
             <a href="#">Contact</a>
           </motion.li>
         </motion.ul>

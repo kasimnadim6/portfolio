@@ -21,9 +21,6 @@ export const fallItem = {
   animate: {
     y: 0,
   },
-  // hover: {
-  //   y: '-0.3rem',
-  // },
 };
 
 export const linkVariants = {
@@ -58,7 +55,7 @@ export const appear = {
     opacity: 1,
     transition: {
       duration: 1,
-      staggerChildren: 1,
+      staggerChildren: 0.4,
     },
   },
 };

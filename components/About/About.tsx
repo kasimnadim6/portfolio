@@ -1,40 +1,6 @@
 import styles from './About.module.scss';
-import { FaHtml5, FaCss3Alt, FaAngular, FaReact } from 'react-icons/fa';
-import { IoLogoJavascript } from 'react-icons/io';
-import { SiTypescript, SiNextdotjs } from 'react-icons/si';
 
 const About = () => {
-  const technologies = [
-    {
-      name: 'HTML5',
-      icon: <FaHtml5 />,
-    },
-    {
-      name: 'CSS3',
-      icon: <FaCss3Alt />,
-    },
-    {
-      name: 'Javascript',
-      icon: <IoLogoJavascript />,
-    },
-    {
-      name: 'Typescript',
-      icon: <SiTypescript />,
-    },
-    {
-      name: 'Angular',
-      icon: <FaAngular />,
-    },
-    {
-      name: 'ReactJS',
-      icon: <FaReact />,
-    },
-
-    {
-      name: 'NextJS',
-      icon: <SiNextdotjs />,
-    },
-  ];
   return (
     <section id="about" className={styles.about}>
       <h2 className={styles.heading}>About Me</h2>
@@ -64,21 +30,6 @@ const About = () => {
             personality is inherent. I prefer to keep learning, continue
             challenging myself, and do interesting things that matter.
           </p>
-          <div className={styles['known-technologies']}>
-            <h3 className={styles['sub-heading']}>
-              Here are a few technologies I&apos;ve been working with recently:
-            </h3>
-            <ul>
-              {technologies.map((t) => (
-                <li key={t.name}>
-                  <span className="d-flex gap-2">
-                    {t.icon}
-                    {t.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </div>
     </section>

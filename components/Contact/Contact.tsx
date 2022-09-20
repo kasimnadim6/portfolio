@@ -1,6 +1,6 @@
 import styles from './Contact.module.scss';
 import React from 'react';
-import Button from '../Shared/Button';
+import Button from '../Shared/Button/Button';
 
 const Contact = () => {
   const whatsAppMe = () => {

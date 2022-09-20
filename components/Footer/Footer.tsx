@@ -1,5 +1,6 @@
 import styles from './Footer.module.scss';
-
+import { SiLinkedin, SiWhatsapp, SiGmail, SiGithub } from 'react-icons/si';
+import Logo from '../Shared/Logo/Logo';
 interface Props {
   mobile_isHeaderCollapsed: boolean;
 }
@@ -37,34 +38,34 @@ const Footer = ({ mobile_isHeaderCollapsed }: Props) => {
         <div className={styles['black-overlap-screen']}></div>
       )}
       <div className={styles['footer__container']}>
-        <span className={styles.logo}>Kasim Nadim</span>
-        <ul className={`w-100 ${styles['connect-me']}`}>
+        <Logo />
+        <ul className={styles['connect-me']}>
           <li>
             <a href="#" onClick={(e) => showProfileHandler(e, 'linkedin')}>
-              LinkedIn
+              <SiLinkedin />
             </a>
           </li>
           <li>
             <a href="#" onClick={(e) => showProfileHandler(e, 'whatsapp')}>
-              WhatsApp
+              <SiWhatsapp />
             </a>
           </li>
           <li>
             <a href="#" onClick={(e) => showProfileHandler(e, 'gmail')}>
-              Gmail
+              <SiGmail />
             </a>
           </li>
           <li>
             <a href="#" onClick={(e) => showProfileHandler(e, 'github')}>
-              Github
+              <SiGithub />
             </a>
           </li>
         </ul>
-        <span className={styles.copyright}>
-          Designed and Built by Mahammad Kasim Nadim &#169;{' '}
-          {new Date().getFullYear()}
-        </span>
       </div>
+      <span className={styles.copyright}>
+        Designed and Built by Mahammad Kasim Nadim &#169;{' '}
+        {new Date().getFullYear()}
+      </span>
     </footer>
   );
 };

@@ -17,18 +17,6 @@
   .logo-box-container {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    .icon-logo {
-      color: var(--white-shade-1);
-      font-size: 2rem;
-    }
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 100;
-      color: var(--white);
-      text-transform: uppercase;
-      font-family: 'Lato', sans-serif;
-    }
     .menu {
       display: none;
       background-color: transparent;

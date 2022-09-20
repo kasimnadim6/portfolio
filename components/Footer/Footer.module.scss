@@ -3,61 +3,47 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 
 .footer {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
   background-color: var(--bg-color);
   padding: 3rem;
+  width: 100%;
   position: relative;
   &__container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    .logo {
-      font-size: 8rem;
-      font-family: 'Water Brush', cursive;
-      background: linear-gradient(
-        150deg,
-        #000048,
-        #041962,
-        #093d7a,
-        #11698f,
-        #1b99a3,
-        #26b59e,
-        #34c48c,
-        #50c67d
-      );
-      background-clip: text;
-      color: transparent;
-    }
+    justify-content: space-around;
     .connect-me {
       display: flex;
-      font-size: 2rem;
+      font-size: 1.6rem;
       list-style: none;
-      padding: 3rem 2rem;
-      gap: 3rem;
+      margin: 0;
+      padding: 0;
       li {
         display: flex;
         justify-content: center;
-        min-width: 10rem;
-        flex: 1;
+        // min-width: 10rem;
+        margin: 1rem 2rem;
+        padding: 0.5rem;
         a {
           text-decoration: none;
           color: var(--white);
           font-weight: 500;
-          transition: all 0.5s ease-in-out;
-          padding: 2rem;
+          transition: all 0.3s ease-in-out;
           &:hover {
             cursor: pointer;
-            color: var(--tertiary-color);
             transform: scale(1.1);
           }
         }
       }
     }
-    .copyright {
-      color: var(--white);
-      font-size: 1.6rem;
-      font-weight: lighter;
-    }
+  }
+  .copyright {
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: lighter;
+    text-align: center;
   }
   .black-overlap-screen {
     width: 100%;

@@ -1,7 +1,7 @@
 import styles from './Banner.module.scss';
 import { motion } from 'framer-motion';
 import { appear } from '../../animations/animations';
-import Button from '../Shared/Button';
+import Button from '../Shared/Button/Button';
 
 const Banner = () => {
   const whatsAppMe = () => {

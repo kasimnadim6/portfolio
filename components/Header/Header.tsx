@@ -1,11 +1,11 @@
 import styles from './Header.module.scss';
 import Head from 'next/head';
-import { SiPaloaltosoftware } from 'react-icons/si';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { fall, fallItem } from '../../animations/animations';
+import Logo from '../Shared/Logo/Logo';
 
 interface Props {
   mobile_isHeaderCollapsed: boolean;
@@ -89,13 +89,7 @@ const Header = ({
         animate="animate"
         className={`${styles['logo-box-container']}`}
       >
-        <motion.div
-          variants={fallItem}
-          className="d-flex align-items-center gap-2"
-        >
-          <SiPaloaltosoftware className={styles['icon-logo']} />
-          <span className={`${styles.logo}`}>Kasim Nadim</span>
-        </motion.div>
+        <Logo />
         {mobile_isHeaderCollapsed && (
           <button
             className={styles.menu}

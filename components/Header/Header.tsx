@@ -6,6 +6,7 @@ import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { fall, fallItem } from '../../animations/animations';
 import Logo from '../Shared/Logo/Logo';
+import { isMobile } from 'react-device-detect';
 
 interface Props {
   mobile_isHeaderCollapsed: boolean;
@@ -61,7 +62,7 @@ const Header = ({
 
   const navigationHandler = (e: BaseSyntheticEvent) => {
     e.preventDefault();
-    mobile_setIsHeaderCollapsed();
+    isMobile && mobile_setIsHeaderCollapsed();
     const target = e.target.textContent + '';
     document.getElementById(target?.toLocaleLowerCase())?.scrollIntoView({
       behavior: 'smooth',

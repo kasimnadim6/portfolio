@@ -4,9 +4,9 @@
 
 .container {
   background-color: var(--bg-color);
-  position: relative;
   .main {
-    margin-top: 7rem;
+    margin-top: 6rem;
+    margin-bottom: -1rem;
     .icon {
       position: absolute;
       bottom: -22.7rem;
@@ -25,5 +25,6 @@
     z-index: 800;
     position: absolute;
     top: 0;
+    left: 0;
   }
 }

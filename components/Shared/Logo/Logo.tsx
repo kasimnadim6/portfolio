@@ -13,9 +13,8 @@ const Logo = () => {
             x2="0%"
             y2="0%"
           >
-            <stop stopColor="#982ff7" offset="20%" />
-            <stop stopColor="#524add" offset="56%" />
-            <stop stopColor="#6668eb" offset="84%" />
+            <stop stopColor="#3dd875" offset="23%" />
+            <stop stopColor="#0eb3a0" offset="87%" />
           </linearGradient>
         </svg>
         <SiPaloaltosoftware

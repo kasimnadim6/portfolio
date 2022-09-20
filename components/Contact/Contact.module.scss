@@ -3,12 +3,11 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 
 .contact {
-  padding: 10rem 6rem;
+  padding: 12rem 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  line-height: 1.2;
   color: var(--white);
   background-color: var(--black-shade-1);
   position: relative;
@@ -26,6 +25,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: 1.2rem;
     .circle-shape__0 {
       position: absolute;
       bottom: 0px;
@@ -96,7 +96,7 @@
 
 @include media-breakpoint-down(sm) {
   .contact {
-    padding: 1.8rem;
+    padding: 8rem 2rem;
     .message {
       width: 100%;
     }

@@ -24,23 +24,23 @@
       &:nth-child(even) {
         flex-direction: row-reverse;
         .project-card {
-          transform: perspective(800px) rotateY(-20deg) scale(0.8) rotateX(0deg);
-          // filter: drop-shadow(3rem 5rem 5rem #646f7c);
+          transform: perspective(800px) rotateY(-30deg) scale(0.8) rotateX(0deg);
+          // filter: drop-shadow(-7rem -3rem 15rem #646f7c);
         }
       }
       &:nth-child(odd) {
         .project-card {
-          transform: perspective(800px) rotateY(20deg) scale(0.8) rotateX(0deg);
-          // filter: drop-shadow(-3rem 5rem 5rem #646f7c);
+          transform: perspective(800px) rotateY(30deg) scale(0.8) rotateX(0deg);
+          // filter: drop-shadow(7rem -3rem 15rem #646f7c);
           &::before {
             display: block;
             content: '';
             background-image: var(--number-image);
             position: absolute;
             top: -5rem;
-            left: -5rem;
-            width: 14rem;
-            height: 14rem;
+            left: -3rem;
+            width: 12rem;
+            height: 12rem;
             background-repeat: no-repeat;
             background-size: contain;
           }
@@ -51,11 +51,7 @@
         flex: 2;
         list-style: none;
         min-height: 40rem;
-        background: linear-gradient(
-          rgba(35, 37, 49, 0.5),
-          rgba(15, 15, 24, 0.5)
-        );
-        border: 0.2rem solid rgb(32, 34, 46);
+        border: 0.01rem solid rgb(32, 34, 46);
         background-image: linear-gradient(
             to right bottom,
             rgba(35, 37, 49, 0.4),
@@ -66,25 +62,25 @@
         background-size: cover;
         box-shadow: 0 60px 123px -25px hsl(225deg 2% 62% / 42%),
           0 35px 75px -35px hsl(225deg 2% 62% / 8%);
-
         backdrop-filter: blur(54px);
         border-radius: 7rem;
         transition: all 0.6s;
-        &:hover {
-          transform: perspective(800px) rotateY(0deg) scale(1) rotateX(0deg);
-          filter: drop-shadow(0rem 0rem 7rem #646f7c);
-        }
         &::before {
           display: block;
           content: '';
           background-image: var(--number-image);
           position: absolute;
           top: -5rem;
-          right: -5rem;
-          width: 14rem;
-          height: 14rem;
+          right: -3rem;
+          width: 12rem;
+          height: 12rem;
           background-repeat: no-repeat;
           background-size: contain;
+          transition: all 0.6s;
+        }
+        &:hover {
+          transform: perspective(800px) rotateY(0deg) scale(0.9) rotateX(0deg);
+          filter: drop-shadow(0rem 0rem 7rem #646f7c);
         }
       }
       .project-info {
@@ -147,33 +143,27 @@
   }
 }
 
-// @include media-breakpoint-down(sm) {
-//   .works {
-//     padding: 1.8rem;
-//     .container {
-//       .project {
-//         padding: 2rem;
-//         &:nth-child(odd) {
-//           left: -2.7rem;
-//         }
-//         &:nth-child(even) {
-//           right: -1rem;
-//         }
-//         &__info {
-//           width: 100%;
-//           padding: 1.5rem;
-//           .technology-used {
-//           }
-//         }
-//         ul {
-//           padding-left: 0.6rem;
-//         }
-//         &:hover {
-//           .project__info {
-//             transform: translateZ(3rem) translateX(1.5rem);
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+@include media-breakpoint-down(sm) {
+  .works {
+    padding: 1.8rem;
+    .container {
+      gap: 5rem;
+      .project,
+      .project:nth-child(odd),
+      .project:nth-child(even) {
+        flex-direction: column;
+        .project-card {
+          // transform: perspective(800px) rotateY(0deg) scale(0.8) rotateX(0deg);
+        }
+        &:not([data-scroll='0']) {
+          .project-card {
+            box-shadow: 0 1em 12em -3em hsl(225deg 2% 62% / 42%),
+              0 35px 75px -35px hsl(225deg 2% 62% / 8%);
+          }
+          .project-info {
+          }
+        }
+      }
+    }
+  }
+}

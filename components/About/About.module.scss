@@ -13,8 +13,9 @@
   }
   .container {
     display: flex;
-    gap: 3rem;
+    gap: 5rem;
     width: 100%;
+    padding: 2rem 0 5rem 0;
     .about-me {
       flex: 2;
       font-size: 1.8rem;
@@ -24,6 +25,37 @@
         color: var(--tertiary-color);
         text-decoration: none;
         font-weight: 500;
+      }
+    }
+    .about-bg {
+      flex: 1;
+      max-width: 30rem;
+      position: relative;
+      .top-icon {
+        color: var(--white-shade-2);
+        color: aquamarine;
+        font-size: 3rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+      }
+      .profile {
+        background-size: cover;
+        height: 10rem;
+        z-index: 100;
+        border-radius: 5px;
+      }
+      &::after {
+        display: block;
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 7%;
+        left: 7%;
+        border: 1px solid var(--white-shade-1);
+        border-radius: 5px;
       }
     }
   }

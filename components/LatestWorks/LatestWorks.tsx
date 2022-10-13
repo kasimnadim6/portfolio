@@ -28,14 +28,16 @@ const LatestWorks = () => {
       numberImage: 'two.svg',
       backGroundImage: 'NetflixClone.png',
       projectName: 'Netflix Clone',
-      description: `It's a clone of Netflix.`,
+      description: `It's a clone of Netflix. Built with ReactJS. I have used Google authentication and Cloud FireStore Database to maintain customer & their subscription details.
+      Strip is mainly used for payment while upgrading netflix subscription. `,
       usedTechnology: [
         'ReactJS',
+        'Redux',
         'HTML5',
         'CSS3',
         'SASS',
         'Strip: for payment',
-        `Firebase`,
+        `Firebase: FiresStore - Stripe Extension, Google Authentication`,
       ],
       gitHubLink: 'https://github.com/kasimnadim6/netflix',
       websiteLink: 'https://netflix-de158.firebaseapp.com/',
@@ -50,6 +52,16 @@ const LatestWorks = () => {
       usedTechnology: ['Angular', 'HTML5', 'CSS3'],
       gitHubLink: 'https://github.com/kasimnadim6/flightService',
       websiteLink: 'https://flightsvc.netlify.app',
+    },
+    {
+      id: 4,
+      numberImage: 'four.svg',
+      backGroundImage: 'MyPlayer.png',
+      projectName: 'My Player',
+      description: `It's a simple music player where songs are limited.`,
+      usedTechnology: ['ReactJS', 'Redux', 'HTML5', 'CSS3', 'Firebase'],
+      gitHubLink: 'https://github.com/kasimnadim6/myplayer',
+      websiteLink: 'https://simplayer-2db8a.web.app/',
     },
   ];
 

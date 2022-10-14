@@ -53,15 +53,15 @@
         background: linear-gradient(
             to right bottom,
             rgba(0, 82, 204, 0.5),
-            rgba(0, 82, 204, 0.5)
+            rgba(14, 179, 160, 0.5)
           ),
-          url('../../public/1-1.jpg') center center;
+          url('../../public/1.png') top 13% center;
         background-size: cover;
         position: relative;
         transform-style: preserve-3d;
         &:hover {
           cursor: pointer;
-          background: url('../../public/1-1.jpg') center center;
+          background: url('../../public/1.png') top 13% center;
           background-size: cover;
         }
         &::after {

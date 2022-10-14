@@ -1,6 +1,4 @@
 import styles from './About.module.scss';
-import Image from 'next/image';
-import profile from '../../public/1-1.jpg';
 
 const About = () => {
   return (

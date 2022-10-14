@@ -1,6 +1,6 @@
 import styles from './About.module.scss';
 import Image from 'next/image';
-import profile from '../../public/1.jpeg';
+import profile from '../../public/1-1.jpg';
 
 const About = () => {
   return (
@@ -28,17 +28,7 @@ const About = () => {
           </p>
         </div>
         <div className={styles['about-bg']}>
-          <Image
-            className={styles.profile}
-            width={170}
-            height={170}
-            src={profile}
-            layout="responsive"
-            alt="about background"
-            objectFit="cover"
-            objectPosition="center center"
-            placeholder="blur"
-          />
+          <div className={styles.profile}></div>
         </div>
       </div>
     </section>

@@ -3,13 +3,13 @@ import Link from 'next/link';
 import { HiExternalLink } from 'react-icons/hi';
 import { FaGithub } from 'react-icons/fa';
 import { CSSProperties } from 'react';
-// import d from '../../public/img/';
+
 const LatestWorks = () => {
   const projects = [
     {
       id: 1,
-      numberImage: 'one.svg',
-      backGroundImage: 'Wildlife.jpg',
+      numberImage: '/one.svg',
+      backGroundImage: '/Wildlife.jpg',
       projectName: 'Wild Nature',
       description: `It's tour planner website.
       A Platform That Helps You Discover The Most Intriguing Locations For Your Vacations. Book Hotels And Spa's At A Cheaper Rate`,

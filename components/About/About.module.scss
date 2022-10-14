@@ -1,186 +1,98 @@
 @import 'bootstrap/scss/_functions';
 @import 'bootstrap/scss/_variables';
 @import 'bootstrap/scss/mixins/_breakpoints';
+@import '../../styles/mixins';
 
 .about {
   padding: 2rem 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: linear-gradient(
-    150deg,
-    #000048,
-    #041962,
-    #093d7a,
-    #11698f,
-    #1b99a3,
-    #26b59e,
-    #34c48c,
-    #50c67d
-  );
-  color: var(--white-light-1);
   .heading {
-    font-size: 3.6rem;
-    line-height: 1.7;
-    color: var(--white);
-    text-shadow: 1px 1px 2px rgba(#ffff, 0.4);
+    @include heading;
   }
   .container {
     display: flex;
-    gap: 3rem;
+    gap: 5rem;
     width: 100%;
+    padding: 2rem 0 5rem 0;
     .about-me {
       flex: 2;
-      font-size: 2rem;
-      line-height: 1.4;
+      font-size: 1.8rem;
       text-align: justify;
-
+      color: var(--white-shade-2);
       a {
         color: var(--tertiary-color);
         text-decoration: none;
         font-weight: 500;
       }
-      .known-technologies {
-        ul {
-          padding: 0.6rem;
-          display: flex;
-          flex-wrap: wrap;
-          li {
-            list-style: none;
-            font-size: 1.6rem;
-            line-height: 1.4;
-            font-weight: bold;
-            width: 50%;
-            span {
-              display: flex;
-              // align-items: center;
-            }
-          }
-        }
-      }
     }
-    .card {
-      display: flex;
+    .about-bg {
       flex: 1;
+      display: flex;
       justify-content: center;
-      min-width: 35rem;
-      height: 50rem;
-      &:hover .photo::before {
-        background: none;
+      width: 100%;
+      // height: 32rem;
+      padding: 0 4rem;
+      .top-icon {
+        color: var(--white-shade-2);
+        color: aquamarine;
+        font-size: 3rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1000;
       }
-      .photo {
-        min-width: 30rem;
-        max-width: 30rem;
-        height: 42rem;
-        background: url(../../public/profile.jpeg) center bottom;
+      .profile {
         background-size: cover;
+        max-width: 30rem;
+        min-height: 32rem;
         width: 100%;
-        margin: 3rem;
-        cursor: pointer;
+        height: 100%;
+        border-radius: 5px;
+        background: linear-gradient(
+            to right bottom,
+            rgba(0, 82, 204, 0.5),
+            rgba(0, 82, 204, 0.5)
+          ),
+          url('../../public/1-1.jpg') center center;
+        background-size: cover;
         position: relative;
-        &:before {
-          position: absolute;
-          top: 0;
-          left: 0;
+        transform-style: preserve-3d;
+        &:hover {
+          cursor: pointer;
+          background: url('../../public/1-1.jpg') center center;
+          background-size: cover;
+        }
+        &::after {
+          display: block;
+          content: '';
           width: 100%;
           height: 100%;
-          content: '';
-          background: linear-gradient(
-            150deg,
-            rgba(#242448, 0.6),
-            rgba(#161648, 0.8)
-          );
-        }
-        .name,
-        .experience {
           position: absolute;
-          background: linear-gradient(
-            150deg,
-            #000048,
-            #041962,
-            #093d7a,
-            #11698f,
-            #1b99a3,
-            #26b59e,
-            #34c48c,
-            #50c67d
-          );
-          font-size: 2rem;
-          letter-spacing: 1px;
-          font-family: inherit;
-          font-weight: bold;
-          text-transform: uppercase;
-          color: #f2f2f2;
-          width: 50%;
-          padding: 1.2rem;
-          text-align: end;
-          span {
-            box-decoration-break: clone;
-          }
+          top: 7%;
+          left: 7%;
+          border: 1px solid var(--white-shade-1);
+          border-radius: 5px;
+          transform: translateZ(-1px);
         }
-        .name {
-          right: 0;
-        }
-        .experience {
-          bottom: 0;
-          height: 8rem;
-          &-year {
-            font-size: 6rem;
-            display: block;
-            padding: 0.8rem !important;
-            text-align: start;
-            position: absolute;
-            left: 0;
-            bottom: 8rem;
-            background: linear-gradient(
-              150deg,
-              #000048,
-              #041962,
-              #093d7a,
-              #11698f,
-              #1b99a3,
-              #26b59e,
-              #34c48c,
-              #50c67d
-            );
-          }
+      }
+    }
+    @include media-breakpoint-down(lg) {
+      align-items: center;
+      .about-bg {
+        flex: 0 auto;
+        .profile {
+          max-width: 40rem;
+          min-height: 40rem;
         }
       }
     }
   }
-}
-.mouse-enter {
-  transition: none;
-  .name {
-    transition: all 0.6s;
-    transform: translateZ(10rem) translateX(-2rem) translateY(2rem);
-  }
-  .experience {
-    transition: all 0.6s;
-    transform: translateZ(10rem) translateX(2rem) translateY(-2rem);
-  }
-}
-.mouse-leave {
-  transition: all 0, 5s ease-out;
-  transform: rotateX(0) rotateY(0) !important;
-}
-.icon {
-  margin-right: 5px;
 }
 
 @include media-breakpoint-down(sm) {
   .about {
     padding: 1.8rem;
-    .container {
-      gap: 0;
-      .card {
-        .photo {
-          margin: 0;
-          &::before {
-            background: none;
-          }
-        }
-      }
-    }
   }
 }

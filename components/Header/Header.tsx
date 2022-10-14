@@ -1,11 +1,12 @@
 import styles from './Header.module.scss';
 import Head from 'next/head';
-import { SiCoderwall } from 'react-icons/si';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { BiMenuAltRight } from 'react-icons/bi';
 import { BaseSyntheticEvent, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { fall, fallItem } from '../../animations/animations';
+import { appear, fall, fallItem } from '../../animations/animations';
+import Logo from '../Shared/Logo/Logo';
+import { isMobile } from 'react-device-detect';
 
 interface Props {
   mobile_isHeaderCollapsed: boolean;
@@ -61,12 +62,10 @@ const Header = ({
 
   const navigationHandler = (e: BaseSyntheticEvent) => {
     e.preventDefault();
-    mobile_setIsHeaderCollapsed();
+    isMobile && mobile_setIsHeaderCollapsed();
     const target = e.target.textContent + '';
     document.getElementById(target?.toLocaleLowerCase())?.scrollIntoView({
       behavior: 'smooth',
-      // block: 'center',
-      // inline: 'center',
     });
   };
 
@@ -91,13 +90,7 @@ const Header = ({
         animate="animate"
         className={`${styles['logo-box-container']}`}
       >
-        <motion.div
-          variants={fallItem}
-          className="d-flex align-items-center gap-3"
-        >
-          <SiCoderwall className={styles['icon-logo']} />
-          <span className={styles.logo}>Kasim</span>
-        </motion.div>
+        <Logo mobile_isHeaderCollapsed={mobile_isHeaderCollapsed} />
         {mobile_isHeaderCollapsed && (
           <button
             className={styles.menu}
@@ -110,24 +103,33 @@ const Header = ({
 
       <nav className={`${styles['nav-links']}`}>
         <motion.ul
-          variants={fall}
+          variants={!isMobile ? fall : appear}
           initial="initial"
           // whileHover="hover"
           animate="animate"
         >
-          <motion.li variants={fallItem} onClick={navigationHandler}>
+          <motion.li
+            variants={!isMobile ? fallItem : appear}
+            onClick={navigationHandler}
+          >
             <a href="#">About</a>
           </motion.li>
           {/* <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">Experience</a>
           </motion.li> */}
-          <motion.li variants={fallItem} onClick={navigationHandler}>
+          <motion.li
+            variants={!isMobile ? fallItem : appear}
+            onClick={navigationHandler}
+          >
             <a href="#">Work</a>
           </motion.li>
           {/* <motion.li variants={fallItem} onClick={navigationHandler}>
             <a href="#">Experiments</a>
           </motion.li> */}
-          <motion.li variants={fallItem} onClick={navigationHandler}>
+          <motion.li
+            variants={!isMobile ? fallItem : appear}
+            onClick={navigationHandler}
+          >
             <a href="#">Contact</a>
           </motion.li>
         </motion.ul>
@@ -140,34 +142,6 @@ const Header = ({
           <AiOutlineCloseCircle />
         </button>
       )}
-      {/* <div className={styles['social-icons']}>
-        <ul>
-          <li>
-            <a href="#">
-              <BsLinkedin
-                className={`${styles.icon} ${styles['icon-linkedIn']}`}
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <BsWhatsapp
-                className={`${styles.icon} ${styles['icon-whatsApp']}`}
-              />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <SiGmail className={`${styles.icon} ${styles['icon-gmail']}`} />
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <BsGithub className={`${styles.icon} ${styles['icon-github']}`} />
-            </a>
-          </li>
-        </ul>
-      </div> */}
     </header>
   );
 };

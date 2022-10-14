@@ -4,91 +4,60 @@
 
 .banner {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 4rem 6rem;
-  min-height: calc(100vh - 7rem);
   .about {
-    font-weight: bold;
-    .circle {
-      width: 10rem;
-      height: 10rem;
-      border-radius: 10rem;
-      margin-bottom: 3rem;
-      position: relative;
-      .icon-code {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 2rem;
-      }
-    }
-    .role {
-      font-size: 1.2rem;
-      position: absolute;
-      top: 5%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 8rem 0 10rem 0;
+    .name {
+      font-size: 5.6rem;
       text-transform: uppercase;
-      color: var(--primary-color);
-      span {
-        position: absolute;
-        transform-origin: 0 5rem;
-      }
-      &::before {
-        content: '\A';
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #4ca456;
-        display: inline-block;
-      }
+      background-image: linear-gradient(243deg, #3dd875 23%, #0eb3a0 87%);
+      color: transparent;
+      -webkit-background-clip: text;
+      font-weight: 900;
+      margin: 0;
+      text-align: center;
     }
-    .intro-container {
-      color: var(--primary-color);
-      display: flex;
-      flex-direction: column;
-      .name {
-        font-size: 7rem;
-        text-transform: uppercase;
-        text-shadow: 1px 1px 1px var(--primary-color);
+    .tag {
+      font-family: inherit;
+      &--1 {
+        font-size: 1.6rem;
+        font-weight: 100;
+        letter-spacing: 1px;
+        color: var(--white);
+        font-family: 'Lato', sans-serif;
       }
-      .tag {
-        font-family: inherit;
-        &--1 {
-          font-size: 1.8rem;
-          line-height: 1.7;
+      &--2 {
+        font-size: 4rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        color: var(--white-shade-2);
+        text-align: center;
+        .web {
+          background: linear-gradient(
+            to right bottom,
+            #041962,
+            #26b59e,
+            #34c48c
+          );
+          background-clip: text;
+          color: transparent;
         }
-        &--2 {
-          font-size: 6rem;
-          font-weight: bold;
-          text-transform: uppercase;
-          position: relative;
-          .web {
-            background: linear-gradient(
-              150deg,
-              #000048,
-              #041962,
-              #093d7a,
-              #11698f,
-              #1b99a3,
-              #26b59e,
-              #34c48c,
-              #50c67d
-            );
-            background-clip: text;
-            color: transparent;
-          }
-        }
-        &--3 {
-          width: 50%;
-          color: var(--dark-dim);
-          font-size: 1.8rem;
-          line-height: 1.4;
-          padding-top: 0.8rem;
-          margin-bottom: 2.8rem;
-        }
+      }
+      &--3 {
+        width: 65%;
+        margin-top: 1.8rem;
+        color: var(--white-shade-2);
+        font-size: 1.8rem;
+        font-weight: 100;
+        text-align: center;
       }
     }
   }
@@ -96,21 +65,16 @@
 
 @include media-breakpoint-down(sm) {
   .banner {
-    padding: 1.8rem;
+    padding: 6rem 2rem;
     .about {
-      .circle {
-        display: none;
+      .name {
+        font-size: 5rem;
       }
-      .intro-container {
-        .name {
-          // font-size: 5rem;
-        }
-        .tag--2 {
-          // font-size: 4rem;
-        }
-        .tag--3 {
-          width: 100%;
-        }
+      .tag--2 {
+        font-size: 3.2rem;
+      }
+      .tag--3 {
+        width: 100%;
       }
     }
   }

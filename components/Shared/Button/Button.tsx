@@ -1,19 +1,23 @@
 import styles from './Button.module.scss';
 import { motion } from 'framer-motion';
 import { MdOutlineDoubleArrow } from 'react-icons/md';
-import { arrowMovement } from '../../animations/animations';
+import { arrowMovement } from '../../../animations/animations';
 import { ReactNode } from 'react';
 
 interface Props {
+  className?: string;
   children?: ReactNode;
   onClick?: () => any;
 }
-const Button = ({ children, onClick }: Props) => {
+const Button = ({ children, onClick, className }: Props) => {
   return (
-    <button className={styles.btn} onClick={onClick}>
+    <button
+      className={`${styles.btn} ${className ? styles[className] : ''}`}
+      onClick={onClick}
+    >
       {children}
       <motion.span variants={arrowMovement} initial="initial" animate="animate">
-        <MdOutlineDoubleArrow size={18} />
+        <MdOutlineDoubleArrow size={16} />
       </motion.span>
     </button>
   );

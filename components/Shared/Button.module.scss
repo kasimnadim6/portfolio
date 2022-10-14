@@ -1,9 +1,0 @@
-@import '../../styles/mixins';
-.btn {
-  padding: 1.4rem;
-  width: 18rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  @include button-style;
-}

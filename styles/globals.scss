@@ -14,8 +14,9 @@ html,
 body {
   font-family: 'League Spartan', sans-serif !important;
   font-size: 47%;
-  background-color: var(--white-light-1);
   overflow-x: hidden;
+  position: relative;
+  background-color: var(--bg-color);
   @include media-breakpoint-up(sm) {
     font-size: 62.5%;
   }
@@ -28,7 +29,18 @@ body {
   @include media-breakpoint-up(xl) {
     // font-size: 80%;
   }
-  // @include media-breakpoint-up(xxl) {
-  //   font-size: 87.5%;
-  // }
+  ::-webkit-scrollbar {
+    height: 3px;
+    width: 5px;
+  }
+  scrollbar-width: thin;
+  scrollbar-color: var(--blue-color-light) var(--blue-color-dark);
+  ::-webkit-scrollbar-track {
+    background: var(--black-shade-1);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--blue-color-light);
+    border-radius: 5rem;
+    border: 1px solid var(--blue-color-dark);
+  }
 }

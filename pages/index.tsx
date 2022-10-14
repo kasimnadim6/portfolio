@@ -11,6 +11,7 @@ import Experience from '../components/Experience/Experience';
 import 'bootstrap/dist/css/bootstrap.css';
 import { useState } from 'react';
 import FunProjects from '../components/FunProjects/FunProjects';
+import Technologies from '../components/Technologies/Technologies';
 
 const Home: NextPage = () => {
   const [mobile_isHeaderCollapsed, mobile_setIsHeaderCollapsed] =
@@ -20,16 +21,17 @@ const Home: NextPage = () => {
   };
   return (
     <AnimatePresence>
+      {!mobile_isHeaderCollapsed && (
+        <div className={styles['black-overlap-screen']}></div>
+      )}
       <Header
         mobile_isHeaderCollapsed={mobile_isHeaderCollapsed}
         mobile_setIsHeaderCollapsed={mobile_setIsHeaderCollapsedHandler}
       />
       <div className={styles.container}>
-        {!mobile_isHeaderCollapsed && (
-          <div className={styles['black-overlap-screen']}></div>
-        )}
         <main className={styles.main}>
           <Banner />
+          <Technologies />
           <About />
           {/* <Experience /> */}
           <LatestWorks />
@@ -37,7 +39,7 @@ const Home: NextPage = () => {
           <Contact />
         </main>
       </div>
-      <Footer mobile_isHeaderCollapsed={mobile_isHeaderCollapsed} />
+      <Footer />
     </AnimatePresence>
   );
 };

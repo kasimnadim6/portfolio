@@ -3,48 +3,148 @@
 @import 'bootstrap/scss/mixins/_breakpoints';
 
 .contact {
-  padding: 10rem 6rem;
+  padding: 12rem 6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  line-height: 1.2;
+  color: var(--white);
+  background-color: var(--black-shade-1);
+  position: relative;
+  .bg-shape-wrap {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 0;
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    .circle-shape__0 {
+      position: absolute;
+      bottom: 0px;
+      width: 10em;
+      height: 10em;
+      border-radius: 100%;
+      transform: translate(0px, 50%);
+    }
+    .circle-shape__1 {
+      position: absolute;
+      bottom: 0px;
+      width: 28em;
+      height: 28em;
+      border-radius: 100%;
+      box-shadow: 0 -32px 80px -72px rgb(#3aecba, 30%);
+      transform: translate(0px, 50%);
+    }
+    .circle-shape__2 {
+      position: absolute;
+      bottom: 0px;
+      width: 45em;
+      height: 45em;
+      border-radius: 100%;
+      box-shadow: 0 -32px 80px -72px rgb(#3aecba, 30%);
+      transform: translate(0px, 50%);
+    }
+    .circle-shape__3 {
+      position: absolute;
+      bottom: 0px;
+      width: 62em;
+      height: 62em;
+      border-radius: 100%;
+      box-shadow: 0 -32px 80px -72px rgb(#3aecba, 30%);
+      transform: translate(0px, 50%);
+    }
+    .circle-shape__4 {
+      position: absolute;
+      bottom: 0px;
+      width: 78em;
+      height: 78em;
+      border-radius: 100%;
+      box-shadow: 0 -32px 80px -72px rgb(#3aecba, 30%);
+      transform: translate(0px, 50%);
+    }
+  }
   .sub-heading {
     font-size: 1.6rem;
-    font-weight: bold;
+    font-weight: 100;
     margin-bottom: 1rem;
-    color: var(--primary-color);
-    background: linear-gradient(
-      150deg,
-      #000048,
-      #041962,
-      #093d7a,
-      #11698f,
-      #1b99a3,
-      #26b59e,
-      #34c48c,
-      #50c67d
-    );
-    background-clip: text;
-    color: transparent;
+    letter-spacing: 1px;
+    font-family: 'Lato', sans-serif;
   }
   .heading {
     font-size: 6rem;
-    font-weight: bold;
     margin-bottom: 1.4rem;
-    color: var(--primary-color);
-    text-shadow: 1px 1px 1px var(--primary-color);
+    background-image: linear-gradient(243deg, #3dd875 23%, #0eb3a0 87%);
+    color: transparent;
+    -webkit-background-clip: text;
+    font-weight: 900;
   }
   .message {
     font-size: 1.8rem;
-    width: 75%;
-    margin-bottom: 2.8rem;
     text-align: center;
+    width: 80%;
+    color: var(--white-shade-2);
   }
 }
 
 @include media-breakpoint-down(sm) {
   .contact {
-    padding: 1.8rem;
+    padding: 8rem 2rem;
+    .message {
+      width: 100%;
+    }
+    .bg-shape-wrap {
+      .circle-shape__0 {
+        position: absolute;
+        bottom: 0px;
+        width: 6em;
+        height: 6em;
+        border-radius: 100%;
+        transform: translate(0px, 50%);
+      }
+      .circle-shape__1 {
+        position: absolute;
+        bottom: 0px;
+        width: 18em;
+        height: 18em;
+        border-radius: 100%;
+        box-shadow: 0 -32px 80px -72px rgb(#3aecba, 30%);
+        transform: translate(0px, 50%);
+      }
+      .circle-shape__2 {
+        position: absolute;
+        bottom: 0px;
+        width: 30em;
+        height: 30em;
+        border-radius: 100%;
+        box-shadow: 0 -32px 80px -72px rgb(#3aecba, 30%);
+        transform: translate(0px, 50%);
+      }
+      .circle-shape__3 {
+        position: absolute;
+        bottom: 0px;
+        width: 42em;
+        height: 42em;
+        border-radius: 100%;
+        box-shadow: 0 -32px 80px -72px rgb(#3aecba, 30%);
+        transform: translate(0px, 50%);
+      }
+      .circle-shape__4 {
+        position: absolute;
+        bottom: 0px;
+        width: 54em;
+        height: 54em;
+        border-radius: 100%;
+        box-shadow: 0 -32px 80px -72px rgb(#3aecba, 30%);
+        transform: translate(0px, 50%);
+      }
+    }
   }
 }

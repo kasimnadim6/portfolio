@@ -1,0 +1,14 @@
+@import '../../../styles/mixins';
+
+.btn {
+  padding: 1rem 1.4rem;
+  width: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include button-style;
+  &--connect-me {
+    margin-top: 2.6rem;
+    color: var(--white-shade-2);
+  }
+}

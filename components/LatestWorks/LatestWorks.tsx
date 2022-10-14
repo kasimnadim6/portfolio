@@ -19,8 +19,8 @@ const LatestWorks = () => {
     },
     {
       id: 2,
-      numberImage: 'two.svg',
-      backGroundImage: 'NetflixClone.jpg',
+      numberImage: '/two.svg',
+      backGroundImage: '/NetflixClone.jpg',
       projectName: 'Netflix Clone',
       description: `It's a clone of Netflix. Built with ReactJS. I have used Google authentication and Cloud FireStore Database to maintain customer & their subscription details.
       Strip is mainly used for payment while upgrading netflix subscription. `,
@@ -38,8 +38,8 @@ const LatestWorks = () => {
     },
     {
       id: 3,
-      numberImage: 'three.svg',
-      backGroundImage: 'FlightService.jpg',
+      numberImage: '/three.svg',
+      backGroundImage: '/FlightService.jpg',
       projectName: 'Flight Management',
       description: `It's a flight managing app. where you login as staff/admin and do some cool stuff.
       Credentials you can use to access application - [username, password]:- [admin, admin], [staff01, staff01], [staff02, staff02], [staff03, staff03]`,
@@ -49,8 +49,8 @@ const LatestWorks = () => {
     },
     {
       id: 4,
-      numberImage: 'four.svg',
-      backGroundImage: 'MyPlayer.jpg',
+      numberImage: '/four.svg',
+      backGroundImage: '/MyPlayer.jpg',
       projectName: 'My Player',
       description: `It's a simple music player where songs are limited.`,
       usedTechnology: ['ReactJS', 'Redux', 'HTML5', 'CSS3', 'Firebase'],

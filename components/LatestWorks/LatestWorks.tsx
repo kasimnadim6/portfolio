@@ -36,17 +36,17 @@ const LatestWorks = () => {
       gitHubLink: 'https://github.com/kasimnadim6/netflix',
       websiteLink: 'https://netflix-de158.firebaseapp.com/',
     },
-    {
-      id: 3,
-      numberImage: '/three.svg',
-      backGroundImage: '/FlightService.jpg',
-      projectName: 'Flight Management',
-      description: `It's a flight managing app. where you login as staff/admin and do some cool stuff.
-      Credentials you can use to access application - [username, password]:- [admin, admin], [staff01, staff01], [staff02, staff02], [staff03, staff03]`,
-      usedTechnology: ['Angular', 'HTML5', 'CSS3'],
-      gitHubLink: 'https://github.com/kasimnadim6/flightService',
-      websiteLink: 'https://flightsvc.netlify.app',
-    },
+    // {
+    //   id: 3,
+    //   numberImage: '/three.svg',
+    //   backGroundImage: '/FlightService.jpg',
+    //   projectName: 'Flight Management',
+    //   description: `It's a flight managing app. where you login as staff/admin and do some cool stuff.
+    //   Credentials you can use to access application - [username, password]:- [admin, admin], [staff01, staff01], [staff02, staff02], [staff03, staff03]`,
+    //   usedTechnology: ['Angular', 'HTML5', 'CSS3'],
+    //   gitHubLink: 'https://github.com/kasimnadim6/flightService',
+    //   websiteLink: 'https://flightsvc.netlify.app',
+    // },
     {
       id: 4,
       numberImage: '/four.svg',

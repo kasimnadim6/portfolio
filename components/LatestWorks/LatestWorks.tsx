@@ -48,8 +48,8 @@ const LatestWorks = () => {
     //   websiteLink: 'https://flightsvc.netlify.app',
     // },
     {
-      id: 4,
-      numberImage: '/four.svg',
+      id: 3,
+      numberImage: '/three.svg',
       backGroundImage: '/MyPlayer.jpg',
       projectName: 'My Player',
       description: `It's a simple music player where songs are limited.`,

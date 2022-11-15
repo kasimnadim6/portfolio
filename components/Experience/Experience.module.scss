@@ -1,3 +1,6 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/mixins/_breakpoints';
 @import '../../styles/mixins';
 
 .experience {
@@ -11,10 +14,13 @@
   }
   .timeline {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 3rem;
     &:not(:last-child) {
       margin-bottom: 2rem;
+      .timeline__point .hr {
+        height: 100% !important;
+      }
     }
     &__heading {
       flex: 1;
@@ -25,6 +31,7 @@
       color: var(--white-shade-1);
       h3 {
         color: var(--white-shade-2);
+        text-align: end;
       }
       span {
         font-size: 1.2rem;
@@ -54,11 +61,11 @@
       }
       .hr {
         border-left: 1px dotted var(--white-shade-2);
-        height: var(--timelineLinkHeight);
         position: absolute;
         left: 50%;
         transform: translate(-50%);
-        top: 2.2rem;
+        top: 2rem;
+        height: calc(100% - 2.2rem);
       }
     }
     &__details {
@@ -69,6 +76,21 @@
       }
       p {
         font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .experience {
+    padding: 1.8rem;
+    .timeline {
+      gap: 1.6rem;
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      &__heading {
+        margin-right: 0rem;
       }
     }
   }

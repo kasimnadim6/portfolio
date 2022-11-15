@@ -1,7 +1,4 @@
 import styles from './Experience.module.scss';
-import Image from 'next/image';
-import mindtreeLogo from '../../public/mindtree-logo.png';
-import cognizantLogo from '../../public/cognizant-logo.png';
 import { CSSProperties } from 'react';
 
 const Experience = () => {
@@ -13,7 +10,6 @@ const Experience = () => {
         endDate: 'July 2018',
       },
       logo: '/sdmit-logo.png',
-      timelineLinkHeight: '4.8rem',
       details: {
         position: 'Graduated',
         description: `Graduated as a Software Engineer from SDMIT. `,
@@ -26,7 +22,6 @@ const Experience = () => {
         endDate: 'Aug 2020',
       },
       logo: '/mindtree-logo.png',
-      timelineLinkHeight: '8.5rem',
       details: {
         position: 'Senior Software Engineer',
         description: `Experienced in core web technologies i.e HTML, CSS & JavaScript.
@@ -41,7 +36,6 @@ const Experience = () => {
         endDate: 'Current',
       },
       logo: '/cognizant-logo.png',
-      timelineLinkHeight: '7.2rem',
       details: {
         position: 'Associate',
         description: `I am working as Front End Developer and Developed React components invoking REST services.
@@ -67,14 +61,7 @@ const Experience = () => {
                 className={styles['timeline__point-logo']}
                 style={{ '--bg': `url(${event.logo})` } as CSSProperties}
               ></div>
-              <div
-                className={styles.hr}
-                style={
-                  {
-                    '--timelineLinkHeight': event.timelineLinkHeight,
-                  } as CSSProperties
-                }
-              ></div>
+              <div className={styles.hr}></div>
             </div>
             <div className={styles.timeline__details}>
               <h3>{event.details.position}</h3>

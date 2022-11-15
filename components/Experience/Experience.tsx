@@ -26,7 +26,7 @@ const Experience = () => {
         endDate: 'Aug 2020',
       },
       logo: '/mindtree-logo.png',
-      timelineLinkHeight: '10.2rem',
+      timelineLinkHeight: '8.5rem',
       details: {
         position: 'Senior Software Engineer',
         description: `Experienced in core web technologies i.e HTML, CSS & JavaScript.

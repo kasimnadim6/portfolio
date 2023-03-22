@@ -19,7 +19,7 @@ const Experience = () => {
       title: 'Mindtree Ltd',
       timeline: {
         startDate: 'Oct 2018',
-        endDate: 'Aug 2020',
+        endDate: 'Aug 2021',
       },
       logo: '/mindtree-logo.png',
       details: {
@@ -32,7 +32,7 @@ const Experience = () => {
     {
       title: 'Cognizant Technology Solutions',
       timeline: {
-        startDate: 'Aug 2020',
+        startDate: 'Aug 2021',
         endDate: 'Current',
       },
       logo: '/cognizant-logo.png',

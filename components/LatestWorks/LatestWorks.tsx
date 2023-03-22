@@ -57,6 +57,16 @@ const LatestWorks = () => {
       gitHubLink: 'https://github.com/kasimnadim6/myplayer',
       websiteLink: 'https://simplayer-2db8a.web.app/',
     },
+    {
+      id: 4,
+      numberImage: '/four.svg',
+      backGroundImage: '/AirbnbClone.jpg',
+      projectName: 'Airbnb',
+      description: `Airbnb Clone, Built with NextJS and effectively used Tailwind as CSS framework.`,
+      usedTechnology: ['NextJS', 'HTML5', 'CSS3', 'Tailwind'],
+      gitHubLink: 'https://github.com/kasimnadim6/airbnb-clone',
+      websiteLink: 'https://cloneofairbnb.vercel.app/',
+    },
   ];
 
   return (
